@@ -1,5 +1,7 @@
 #mainbox {
-width:200px; 
-height:200px;
+width:500px; 
+height:500px;
 margin: 0 auto;
-background-color: white;}
+background-color: #FBF9EC;
+border-spacing: 20px;
+}
