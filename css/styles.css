@@ -1,12 +1,18 @@
 #mainbox {
-width:500px; 
-height:500px;
-margin: 0 auto;
-background-color: #FBF9EC;
-border-spacing: 20px;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #FBF9EC;
+    padding: 20px;
 }
 
 
 footer {
-background-color: red;
-}  
+    background-color: #F59797;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+    height: 15%;
+    left: 0;
+}
