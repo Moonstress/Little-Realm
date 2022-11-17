@@ -64,10 +64,9 @@ body {
 }
 
 .list li {
-  list-style-type: none;
-  
-  width: 200px;
-  height: 200px;
+  list-style-type: none;  
+  width: 40px;
+  height: 400x;
   opacity: .25;
   position: absolute;
   left: 50%;
