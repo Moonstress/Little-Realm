@@ -23,6 +23,11 @@
   background-color: #00A4BD;
 }
 
+.button {
+  border:none;
+  background-color: transparent;
+}
+
 #mainbox {
     width: 400px;
     height: 400px;
