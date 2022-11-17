@@ -1,3 +1,19 @@
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position; absolute;
+    width; 100%;
+    overflow: auto;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    
+
 #mainbox {
     width: 400px;
     height: 400px;
