@@ -57,6 +57,9 @@ body {
     position: relative;  
 }
 
+li #img_1 {
+  list-style-image: url('image.png');
+}
 .list {
   height: 200px;
   position: absolute;
