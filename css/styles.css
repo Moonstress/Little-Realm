@@ -57,7 +57,7 @@ body {
     position: relative;  
 }
 
-#img_1 {
+li#img_1.act {
   list-style-image: url('image.png');
 }
 .list {
