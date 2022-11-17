@@ -22,7 +22,7 @@
   color: #FFFFFF;
   background-color: #00A4BD;
 }
-.intro {
+#intro {
       width: 200px;
     height: 200px;
     overflow: auto;
