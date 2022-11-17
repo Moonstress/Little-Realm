@@ -12,7 +12,10 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.dropdown-content a {
+    display: block;
     
+}
 
 #mainbox {
     width: 400px;
