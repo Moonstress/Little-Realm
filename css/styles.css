@@ -33,14 +33,15 @@ body {
   background-color: #00A4BD;
 }
 #intro {
-  width: 50vh;
+    width: 50vh;
     height: 20vh;
     overflow: auto;
     display: inline-block;
     position: absolute;
     background-color: #F59797;
-    margin: 0 30%;
-    padding: 40px;
+    margin: 1% 30%;
+    padding: 42px;
+    border: 20px solid #F8B8B8;
 }
 
 
@@ -124,14 +125,14 @@ footer {
     position: absolute;
     width: 100%;
     bottom: 0;
-    height: 15%;
+    height: 17%;
     left: 0;
 }
 
 #footer_1 {
-  display: inline-block;
+    display: inline-block;
     position: absolute;
-    margin: -20px 0px 0px 0px;
+    margin: -10px 0px 0px 0px;
     padding: 30px;
     line-height: 30px;
   
