@@ -32,6 +32,10 @@
     padding: 20px;
 }
 
+.body {
+  background-color:#FED9D7; 
+  padding: 0;}
+
 footer {
     background-color: #F59797;
     position: absolute;
