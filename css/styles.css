@@ -33,13 +33,13 @@ body {
   background-color: #00A4BD;
 }
 #intro {
-    width: 400px;
-    height: 200px;
+  width: 50vh;
+    height: 20vh;
     overflow: auto;
     display: inline-block;
     position: absolute;
     background-color: #F59797;
-    margin: 0 50%;
+    margin: 0 30%;
     padding: 40px;
 }
 
