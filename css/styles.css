@@ -4,7 +4,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   background-color:#FED9D7;
 }
 
@@ -41,7 +41,7 @@ body {
     display: inline-block;
     position: absolute;
     background-color: #F59797;
-    margin: 1% 30%;
+    margin: 1% 33%;
     padding: 42px;
     border: 20px solid #F8B8B8;
 }
