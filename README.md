@@ -1,3 +1,1 @@
-# little.realm
-# Im designing this website from scratch to practice my skills
-# 
+<div id="header" style="align:center">Little Realm</div>
