@@ -65,7 +65,7 @@ body {
 
 .list li {
   list-style-type: none;  
-  width: 40px;
+  width: 400px;
   height: 400x;
   opacity: .25;
   position: absolute;
