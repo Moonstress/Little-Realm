@@ -33,11 +33,14 @@ body {
   background-color: #00A4BD;
 }
 #intro {
-      width: 200px;
+    width: 400px;
     height: 200px;
     overflow: auto;
     display: inline-block;
-  position: relative;
+    position: absolute;
+    background-color: #F59797;
+    margin: 0 50%;
+    padding: 40px;
 }
 
 
