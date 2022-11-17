@@ -57,8 +57,8 @@ body {
     position: relative;  
 }
 
-li#img_1.act {
-  list-style-image: url('image.png');
+li#img_1 {
+  background-image: url(https://via.placeholder.com/350x350);
 }
 .list {
   height: 200px;
