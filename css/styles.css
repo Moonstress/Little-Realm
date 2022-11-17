@@ -13,11 +13,13 @@ body {
   position: absolute;
 }
 .dropdown-content {
-  display: none;
-  position: absolute;
-  width:100%;
-  overflow: auto;
-  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    display: none;
+    position: relative;
+    width: 20%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 40%);
+    top: 20px;
+    left: 10%;
 }
 .dropdown:hover .dropdown-content {
   display: block;
