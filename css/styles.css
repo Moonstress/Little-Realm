@@ -139,7 +139,7 @@ body {
   height: 100vh;
   width: 100vw;
   background: rgb(246,210,106);
-  background: linear-gradient(111deg, #fed9d7 0%, #f59797 52%, rgb(245 151 151) 100%);
+  background: linear-gradient(111deg, rgb(245 239 220) 0%, rgb(239 221 168) 52%, #bbeaf1 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,7 +264,7 @@ body {
   box-sizing: border-box;
 }
 footer {
-    background-color: #FBF9EC;
+    background-color: #f3eacd;
     position: absolute;
     width: 100%;
     bottom: 0;
