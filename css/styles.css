@@ -34,6 +34,15 @@ body {
   color: #FFFFFF;
   background-color: #00A4BD;
 }
+
+#welcome {
+    background-color: transparent;
+    position: absolute;
+    left: 60vh;
+    z-index: 3;
+    font-size: 2em;
+}
+
 #intro {
     width: 50vh;
     height: 5vh;
