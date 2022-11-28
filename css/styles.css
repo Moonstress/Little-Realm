@@ -43,6 +43,8 @@ body {
     font-size: 2em;
     font-family: 'Nerko One', cursive;
     text-align:center;
+    color: #fcfefe;
+    text-shadow: #bbeaf1 0 2px;
 }
 
 #intro {
