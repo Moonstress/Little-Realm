@@ -38,13 +38,13 @@ body {
 #welcome {
     background-color: transparent;
     position: absolute;
-    width: 100%
+    width: 100%;
     z-index: 3;
     font-size: 2em;
     font-family: 'Nerko One', cursive;
     text-align:center;
     color: #fcfefe;
-    text-shadow: #bbeaf1 0 2px;
+    text-shadow: #bbeaf1 1px 0 10px;
 }
 
 #intro {
