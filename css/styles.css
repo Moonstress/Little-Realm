@@ -5,7 +5,7 @@
 
 body {
   overflow: hidden;
-  background: linear-gradient(180deg, rgb(245 239 220) 0%, rgb(239 221 168) 52%, #bbeaf1; 
+  background-color: linear-gradient(180deg, rgb(245 239 220) 0%, rgb(239 221 168) 52%, #bbeaf1; 
 }
 
 .dropdown {
