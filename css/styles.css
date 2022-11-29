@@ -19,6 +19,8 @@ body {
 .dropdown-content {
     display: none;
     overflow: auto;
+    line-height: 33px;
+    background-color: #eeddaa;
     
 }
 
