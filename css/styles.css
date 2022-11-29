@@ -45,21 +45,21 @@ body {
     z-index: 3;
     font-size: 2em;
     font-family: 'Nerko One', cursive;
-    text-align:center;
+    text-align: center;
     color: #fcfefe;
-    text-shadow: #bbeaf1 1px 0 10px;
+    text-shadow: #bbeaf1 -1px 4px 5px;
     display: inline-block;
 }
 
 #intro {
-    width: 50vw;
+    width: 30vw;
     height: 5vh;
     overflow: auto;
     display: inline-block;
     position: absolute;
     background-color: #fed9d7;
-    margin: 1% 33%;
-    padding: 42px;
+    margin: 1vh 30vw;
+    padding: 10px;
     border: 1em solid #F8B8B8;
     z-index: 2;
 }
