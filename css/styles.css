@@ -41,7 +41,7 @@ body {
 #welcome {
     background-color: transparent;
     position: absolute;
-    width: 100%;
+    width: 100vw;
     z-index: 3;
     font-size: 2em;
     font-family: 'Nerko One', cursive;
@@ -52,7 +52,7 @@ body {
 }
 
 #intro {
-    width: 50vh;
+    width: 50vw;
     height: 5vh;
     overflow: auto;
     display: inline-block;
@@ -82,7 +82,7 @@ body {
 
 #container {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
     display: inline-block;
     position: absolute;
@@ -95,7 +95,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 95vw;
+  width: 100vw;
   position: absolute;
 }
 
