@@ -20,6 +20,7 @@ body {
     display: none;
     position: absolute;
     overflow: auto;
+    width: 10vh;
 }
 
 .dropdown:hover .dropdown-content {
