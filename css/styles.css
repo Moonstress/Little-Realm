@@ -19,9 +19,8 @@ body {
     width: 10vh;
     height: 100vh;
     overflow: auto;
-    
-    
 }
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
