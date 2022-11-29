@@ -5,12 +5,12 @@
 
 body {
   overflow: hidden;
-  background-color:#FED9D7;
+  background: linear-gradient(180deg, rgb(245 239 220) 0%, rgb(239 221 168) 52%, #bbeaf1 
 }
 
 .dropdown {
   display: inline-block;
-  position: absolute;
+  position: relative;
 }
 .dropdown-content {
     display: none;
