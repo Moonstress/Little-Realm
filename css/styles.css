@@ -41,7 +41,7 @@ body {
 #welcome {
     background-color: transparent;
     position: absolute;
-    width: 100vw;
+    width: 92vw;
     z-index: 3;
     font-size: 3em;
     font-family: 'Nerko One', cursive;
