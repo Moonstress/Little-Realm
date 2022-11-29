@@ -50,7 +50,7 @@ body {
     text-align:center;
     color: #fcfefe;
     text-shadow: #bbeaf1 1px 0 10px;
-    display: inline-box;
+    display: inline-block;
 }
 
 #intro {
