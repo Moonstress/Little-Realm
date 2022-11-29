@@ -4,8 +4,10 @@
 }
 
 body {
-  overflow: hidden;
-  background: linear-gradient(111deg, rgba(246,210,106,1) 0%, rgba(255,159,0,1) 52%, rgba(251,197,100,1) 100%); 
+   overflow: hidden;
+   background: linear-gradient(111deg, rgba(246,210,106,1) 0%, rgba(255,159,0,1) 52%, rgba(251,197,100,1) 100%);
+   position: absolute;
+   background: #f5efdb;
 }
 
 .dropdown {
@@ -46,6 +48,7 @@ body {
     text-align:center;
     color: #fcfefe;
     text-shadow: #bbeaf1 1px 0 10px;
+    display: inline-box;
 }
 
 #intro {
