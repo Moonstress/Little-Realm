@@ -18,14 +18,13 @@ body {
 
 .dropdown-content {
     display: none;
-    position: absolute;
     overflow: auto;
     
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-  width: 10vh;
+  
 }
 .dropdown-content a {
   display: block;
