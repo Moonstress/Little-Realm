@@ -1,63 +1,81 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<title>Little Realm</title>
- <head>
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Patrick+Hand&display=swap" rel="stylesheet">
-  	<link rel="stylesheet" href=css/styles.css>
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
- </head>
- <body>
-	<div style="position:absolute; width:100vw; top: 0; display:inline-block;height: 1vh">
-		<div class="dropdown">
-    			<button title="menu" style="border: 0px; background-color:transparent;"><img src="https://i.ibb.co/cNH55Y8/klipartz-com.png" style=";background-color: #eda4a4;width: 10vh;position: relative;height: 10vh"></button>
-			<div class="cat">Categorías</div>
-			<div class="dropdown-content">
-			<a href="https://blog.hubspot.com/">Pacifiers</a>
-			<a href="https://academy.hubspot.com/">Custom Pacifiers</a>
-			<a href="https://www.youtube.com/user/hubspot">Air Dry Clay</a>
-			<a href="https://www.youtube.com/user/hubspot">Sensory Items</a>
-			<a href="https://www.youtube.com/user/hubspot">Others</a>
-			</div>
-			</div>  
-	<div id="welcome">¡Welcome to Little Realm!</div>
-  	<div id="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies mi eget mauris pharetra. Aliquam ut porttitor leo a. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Facilisi etiam dignissim diam quis enim lobortis. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. Egestas purus viverra accumsan in nisl. Nec ullamcorper sit amet risus nullam eget felis. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Eget nullam non nisi est sit amet facilisis magna etiam. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Eget dolor morbi non arcu risus quis varius. Pulvinar pellentesque habitant morbi tristique senectus et netus et. Turpis massa sed elementum tempus egestas sed sed. Lobortis feugiat vivamus at augue eget. Duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat. Ut faucibus pulvinar elementum integer enim neque volutpat. 
-	</div></div>
-	<div id="container">
-      	<div id="toggleContainer">
-        	<label>Carousel</label>
-         <div id="toggle">
-           <div id="outer3">
-              <div id="slider3"></div>
-           </div>
-           <label>Tiles</label>
-        </div>
-      	</div>
-      	<div id="galleryView">
-        <div id="galleryContainer">
-           <div id="leftView"></div>
-           <button id="navLeft" class="navBtns"><i class="fas fa-arrow-left fa-3x"></i></button>
-           <a id="linkTag">
-              <div id="mainView"></div>
-           </a>
-           <div id="rightView"></div>
-           <button id="navRight" class="navBtns"><i class="fas fa-arrow-right fa-3x"></i></button>
-        </div>
-      	</div>
-      	<div id="tilesView">
-        <div id="tilesContainer"></div>
-      	</div>
-    	</div>
-	<script src="js/main.js"></script>	  
-  	</body>           
 	
-  	<footer>
-		<div id="footer_1"><ul>
+	<link rel="stylesheet" href=css/styles.css>
+
+	<title>Little Realm</title>
+
+</head>
+
+<body>
+
+	<!-- Categorías-->
+	<navbar>
+		<div class="navbar-content">
+			<a href="index.html">Index</a>
+			<a href="pages/pacifiers.html">Pacifiers</a>
+			<a href="pages/custompacifiers.html">Custom Pacifiers</a>
+			<a href="pages/sensory-toys.html">Sensory Items</a>
+			<a href="pages/bundles.html">Bundles</a>
+			<a href="pages/contact.html">Contact</a>
+		</div>
+	</navbar>
+
+	<div id="welcome">Welcome to Little Realm!</div>
+	<div id="intro">A safe place for all communities focused on Mental Health items like <strong>Pacifiers</strong>, Sensory Toys, Talismans, Plushies, Loveys. All customized to get you the item of your dreams, while helping you work toward your mental health objectives.
+	</div>
+	</div>
+
+	<div id="container">
+		<div id="toggleContainer">
+			<label>Carousel</label>
+			<div id="toggle">
+				<div id="outer3">
+					<div id="slider3"></div>
+				</div>
+				<label>Tiles</label>
+			</div>
+		</div>
+		<div id="galleryView">
+			<div id="galleryContainer">
+				<div id="leftView"></div>
+				<button id="navLeft" class="navBtns"><i class="fas fa-arrow-left fa-3x"></i></button>
+				<a id="linkTag">
+					<div id="mainView"></div>
+				</a>
+				<div id="rightView"></div>
+				<button id="navRight" class="navBtns"><i class="fas fa-arrow-right fa-3x"></i></button>
+			</div>
+		</div>
+		<div id="tilesView">
+			<div id="tilesContainer"></div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+
+
+<footer>
+	<div id="footer_1">
+		<ul>
 			<li>About the Shop</li>
 			<li>Shop Policies</li>
 			<li>Shipping</li>
-			<li>F.A.Q</li></ul>
-		</div>
-  	<img src="https://i.ibb.co/T2jnH95/little-realm-fondo-transparente.png" style="height: 20vh;display: inline-block;margin: -10px 0px 0px 43%; position: absolute">
-	</footer></html>
+			<li>F.A.Q</li>
+		</ul>
+	</div>
+	<img src="images/little-realm-fondo-transparente.png"
+		style="height: 20vh;display: inline-block;margin: -10px 0px 0px 43%; position: absolute">
+</footer>
+</body>
+</html>

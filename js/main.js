@@ -102,6 +102,3 @@ document.addEventListener('keyup',function(e){
 });
 
 loadGallery();
-
-
-

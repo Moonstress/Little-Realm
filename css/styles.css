@@ -3,102 +3,158 @@
   margin: 0;
 }
 
-body {
-   overflow: auto;
-   background: linear-gradient(111deg, rgba(246,210,106,1) 0%, rgba(255,159,0,1) 52%, rgba(251,197,100,1) 100%);
-   position: absolute;
-   background: #f5efdb;
-   font-family: 'Patrick Hand', cursive;
+html {
+  margin: 0;
 }
 
-.dropdown {
+
+body {
+  overflow-x: hidden;
+  /* background: #f5efdb; */
+  font-family: 'Patrick Hand', cursive;
+  background: linear-gradient(180deg, rgb(245 239 220) 23%, #bbeaf1b0 37%, #8de4dc 82%);
+  z-index: 1;
+  width: 100vw;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+}
+
+label {
+  margin: 10px;
+}
+
+input {
+  float: right;
+}
+
+input[type=submit],
+input[type=reset] {
+
+  border: 4px solid #f8b8b8;
+  background-color: #f6a09f;
+  width: 10vw;
+  margin-left: 5%;
+  color: white;
+  float: initial;
+  position: relative;
+
+}
+
+input[type=text] {
+  border: 2px solid #dbf7ef;
+  background-color: #8ce5de;
+  width: 10vw;
+  margin-left: 5%;
+  color: white;
+  position: relative;
+  height: 2vh;
+  padding: 2px
+}
+
+/*---------------------- BARRA DE NAVEGACIÓN-------------------*/
+
+navbar {
   display: inline-block;
   position: relative;
+  width: 100vw;
 }
 
-.dropdown-content {
-    display: none;
-    overflow: auto;
-    line-height: 33px;
-    background-color: #eeddaa;
-    
+.navbar-content {
+  overflow: auto;
+  line-height: 33px;
+  background-color: #eeddaa;
+  display: block;
+  height: 5vh;
+  text-align: center;
+
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-  
-}
-.dropdown-content a {
-  display: block;
-  color: #000000;
-  padding: 5px;
+.navbar-content a {
+  color: white;
+  font-family: 'Nerko One', cursive;
   text-decoration: none;
+  font-size: 1.5em;
+  margin-left: 5vw;
+  display: inline-block;
+
 }
-.dropdown-content a:hover {
+
+
+.navbar-content a:hover {
   color: #FFFFFF;
   background-color: #d0e5d3;
-  font-family: 'Nerko One', cursive;
+  height: 100%;
+  width: 10vw;
 }
 
+/*---------------------- FIN BARRA DE NAVEGACIÓN -------------------*/
+/*---------------------- INDEX -------------------*/
 #welcome {
-    background-color: transparent;
-    position: absolute;
-    width: 92vw;
-    z-index: 3;
-    font-size: 3em;
-    font-family: 'Nerko One', cursive;
-    text-align: center;
-    color: #fcfefe;
-    text-shadow: #bbeaf1 -1px 4px 5px;
-    display: inline-block;
+  background-color: transparent;
+  width: 50vw;
+  z-index: 3;
+  font-size: 3em;
+  font-family: 'Nerko One', cursive;
+  text-align: center;
+  color: #fcfefe;
+  text-shadow: #bbeaf1 -1px 4px 5px;
+  display: inline-block;
+  text-align: center;
+  margin-left: 22vw;
+  position: absolute;
 }
 
 #intro {
-    width: 30vw;
-    height: 5vh;
-    overflow: auto;
-    display: inline-block;
-    position: absolute;
-    background-color: #fed9d7;
-    margin: 4vh 30vw;
-    padding: 10px;
-    border: 1em solid #F8B8B8;
-    z-index: 2;
+  width: 30vw;
+  height: 7vh;
+  overflow: auto;
+  display: inline-block;
+  background-color: #fed9d7;
+  margin: 4vh 32vw;
+  padding: 10px;
+  border: 1em solid #F8B8B8;
+  z-index: 2;
+  color: #f3fefc;
 }
-
 
 #mainbox {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-    background-color: #FBF9EC;
-    padding: 20px;
-    top: 50px;
-    position: relative;  
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #FBF9EC;
+  padding: 20px;
+  top: 50px;
+  position: relative;
 }
 
-#toggleContainer label { 
+/*---------------------- Carrusel INDEX-------------------*/
+
+#toggleContainer label {
   text-align: center;
   width: 70px;
+  font-family: 'Nerko One';
+  color: #f29693;
+  font-size: 1.3em;
 }
 
 #container {
-    height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    z-index: -1;
+  box-sizing: border-box;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  z-index: 1;
 }
 
 #toggleContainer {
   height: 10vh;
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: center;
-  width: 100vw;
-  position: absolute;
+  width: 22vw;
+  position: relative;
+  top: 14vh;
+  left: 41vw;
 }
 
 #tilesContainer {
@@ -111,26 +167,22 @@ body {
   flex-wrap: wrap;
   box-sizing: border-box;
   align-content: center;
-  
+  top: -16vh;
+  position: relative;
+  z-index: -1;
 }
 
-.tileItem {
-  width: 250px;
-  height: 250px;
-  margin: 5px;
-  border-radius: 5px;
-  
-  transition: all 0.5s ease;
+#galleryView {
+  height: 80vh;
+  width: 100vw;
+  /*background: rgb(246, 210, 106);
+  background: linear-gradient(180deg, rgb(245 239 220) 0%, #bbeaf187 52%, #8ce5de 100%);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.tileItem:hover {
-   transform: scale(1.05);
-  transition: all 0.5s ease;
-}
-
-#galleryContainer { 
-  height: 500px;
-  width: 800px;
+#galleryContainer {
   background: transparent;
   display: flex;
   flex-direction: row;
@@ -138,6 +190,20 @@ body {
   align-items: center;
   box-sizing: border-box;
   position: relative;
+
+}
+
+.tileItem {
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.tileItem:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
 }
 
 #toggle {
@@ -154,18 +220,9 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
-  
+
 }
 
-#galleryView {
-  height: 100vh;
-  width: 100vw;
-  background: rgb(246,210,106);
-  background: linear-gradient(180deg, rgb(245 239 220) 0%, rgb(239 221 168) 52%, #bbeaf1 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 #outer3 {
   width: 100px;
@@ -180,8 +237,8 @@ body {
 #slider3 {
   height: 36px;
   width: 46px;
-  background-color: orange;
-  border-radius: 3px;  
+  background-color: #f5a2a1;
+  border-radius: 3px;
   transition: all 0.5s;
 }
 
@@ -191,7 +248,7 @@ body {
   -o-transform: translatex(50px);
   transform: translatex(50px);
   transition: all 0.5s;
-  background-color: orange;
+  background-color: #f5a2a1;
 }
 
 #outer3.outerActive {
@@ -202,18 +259,18 @@ body {
 
 #mainView {
   height: 45vh;
-  width: 45vh;  
+  width: 45vh;
   border-radius: 5px;
-  background-color: #eb9100;
+  background-color: #f5a2a1;
   margin-left: 10px;
   margin-right: 10px;
   z-index: 1;
-  transition: all 1s;  
+  transition: all 1s;
 }
 
 #mainView:hover {
   transform: scale(1.2);
-  transition: all 1s;   
+  transition: all 1s;
 }
 
 #leftView {
@@ -227,7 +284,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 1s;  
+  transition: all 1s;
 }
 
 #leftView:hover {
@@ -246,7 +303,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
- transition: all 1s;
+  transition: all 1s;
 }
 
 #rightView:hover {
@@ -280,25 +337,140 @@ body {
   right: 50px;
 }
 
-#linkTag { 
+#linkTag {
   cursor: pointer;
   z-index: 1;
   box-sizing: border-box;
 }
+
+/*---------------------- FIN INDEX-------------------*/
+/*---------------------- CONTACTO-------------------*/
+
+.contact-background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: -1vh;
+  z-index: -1;
+
+}
+
+.contact-background::before {
+  opacity: 0.3;
+  background-image: url(file:///D:/Inform%C3%A1tica/Little%20Realm/images/heart-wallpaper.jpg);
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.contact-box {
+  width: 40vw;
+  height: 50vh;
+  position: relative;
+  background-color: red;
+  margin: 0 auto;
+  top: 18vh;
+}
+
+.contact-data {
+  width: 40%;
+  height: 100%;
+  background-color: #8ce5de;
+  float: left;
+}
+
+.contact-data span {
+  display: block;
+  margin: 20px 0;
+  overflow: auto;
+  padding: 0 1%;
+  width: 98%;
+  color: #f6a09f;
+}
+
+.contact-form {
+  width: 60%;
+  height: 100%;
+  background-color: #fcfefd;
+  float: right;
+}
+
+.contact-form span {
+  display: block;
+  margin: 20px 0;
+  overflow: auto;
+  padding: 0 1%;
+  width: 98%;
+  color: #8ce5de;
+}
+
+/*---------------------- FIN CONTACTO -------------------*/
+/*---------------------- PACIFIERS -------------------*/
+
+#caja-productos {
+  justify-items: stretch;
+  align-items: stretch;
+  display: grid;
+  width: 95%;
+  /* grid-template-columns: auto auto; */
+  grid-column-gap: 10px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 10px;
+
+}
+
+#grilla {
+  display: grid;
+  grid-template-areas:
+    "nav header header"
+    "nav productos publicidad"
+    "nav servicios publicidad"
+    "nav footer footer";
+  grid-template-rows: 0vh 5vh 40vh 0vw;
+  grid-template-columns: 19vh 50vh 30vh;
+}
+
+#grilla .border {
+  border: 1px solid black;
+
+}
+
+section#productos {
+  grid-area: productos;
+}
+
+section#servicios {
+  grid-area: servicios;
+}
+
+nav {
+  grid-area: nav;
+}
+
+aside {
+  grid-area: publicidad;
+}
+
+
+
+
+/*---------------------- FOOTER-------------------*/
+
 footer {
-    background-color: #f3eacd;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: 17%;
-    left: 0;
+  background-color: #eeddaa;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 20vh;
+  left: 0;
 }
 
 #footer_1 {
-    display: inline-block;
-    position: absolute;
-    margin: -10px 0px 0px 0px;
-    padding: 30px;
-    line-height: 30px;
-  
+  display: inline-block;
+  position: absolute;
+  margin: -10px 0px 0px 0px;
+  padding: 30px;
+  line-height: 30px;
+
 }
