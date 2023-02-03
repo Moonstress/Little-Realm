@@ -10,7 +10,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Patrick+Hand&display=swap" rel="stylesheet">
-	
+
 	<link rel="stylesheet" href=css/styles.css>
 
 	<title>Little Realm</title>
@@ -20,7 +20,7 @@
 <body>
 
 	<!-- Categorías-->
-	<navbar>
+	<nav>
 		<div class="navbar-content">
 			<a href="index.html">Index</a>
 			<a href="pages/pacifiers.html">Pacifiers</a>
@@ -29,22 +29,26 @@
 			<a href="pages/bundles.html">Bundles</a>
 			<a href="pages/contact.html">Contact</a>
 		</div>
-	</navbar>
+	</nav>
 
 	<div id="welcome">Welcome to Little Realm!</div>
-	<div id="intro">A safe place for all communities focused on Mental Health items like <strong>Pacifiers</strong>, Sensory Toys, Talismans, Plushies, Loveys. All customized to get you the item of your dreams, while helping you work toward your mental health objectives.
-	</div>
+
+	<div id="toggleContainer">
+		<label>Carousel</label>
+		<div id="toggle">
+			<div id="outer3">
+				<div id="slider3"></div>
+			</div>
+			<label>Tiles</label>
+		</div>
 	</div>
 
 	<div id="container">
-		<div id="toggleContainer">
-			<label>Carousel</label>
-			<div id="toggle">
-				<div id="outer3">
-					<div id="slider3"></div>
-				</div>
-				<label>Tiles</label>
-			</div>
+		
+		<div id="intro">A safe place for all communities focused on Mental Health items like <strong>Pacifiers</strong>,
+			<strong>Sensory Toys</strong>, <strong>Talismans</strong>, <strong>Plushies</strong>, <strong>Loveys</strong>
+			and more. All customized to get you the item of your dreams, while helping you work toward your mental health
+			objectives.
 		</div>
 		<div id="galleryView">
 			<div id="galleryContainer">
@@ -65,17 +69,23 @@
 	<script src="js/main.js"></script>
 
 
-<footer>
-	<div id="footer_1">
-		<ul>
+	<footer>
+		<ul class="footer_cont">
 			<li>About the Shop</li>
 			<li>Shop Policies</li>
 			<li>Shipping</li>
 			<li>F.A.Q</li>
 		</ul>
-	</div>
-	<img src="images/little-realm-fondo-transparente.png"
-		style="height: 20vh;display: inline-block;margin: -10px 0px 0px 43%; position: absolute">
-</footer>
+		
+		<img src="images/little-realm-fondo-transparente.png">
+		<ul class="footer_cont">
+			<li>About the Shop</li>
+			<li>Shop Policies</li>
+			<li>Shipping</li>
+			<li>F.A.Q</li>
+		</ul>
+
+	</footer>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-<div id="header" align="center">
+<div id="header" text-align="center">
   <img src="https://i.ibb.co/T2jnH95/little-realm-fondo-transparente.png"></img>
   <h1>Little Realm Website</h1>
   </div>

@@ -1,10 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-}
-
-html {
-  margin: 0;
+  box-sizing: border-box;
 }
 
 
@@ -14,7 +11,7 @@ body {
   font-family: 'Patrick Hand', cursive;
   background: linear-gradient(180deg, rgb(245 239 220) 23%, #bbeaf1b0 37%, #8de4dc 82%);
   z-index: 1;
-  width: 100vw;
+  width: 100%;
   background-attachment: fixed;
   position: relative;
   min-height: 100vh;
@@ -41,7 +38,8 @@ input[type=reset] {
 
 }
 
-input[type=text] {
+input[type=text],
+input[type=email] {
   border: 2px solid #dbf7ef;
   background-color: #8ce5de;
   width: 10vw;
@@ -54,20 +52,22 @@ input[type=text] {
 
 /*---------------------- BARRA DE NAVEGACIÓN-------------------*/
 
-navbar {
-  display: inline-block;
-  position: relative;
-  width: 100vw;
+nav {
+  position: sticky;
+  top: 0;
+
+
 }
 
 .navbar-content {
   overflow: auto;
   line-height: 33px;
   background-color: #eeddaa;
-  display: block;
   height: 5vh;
-  text-align: center;
-
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5%
 }
 
 .navbar-content a {
@@ -75,20 +75,23 @@ navbar {
   font-family: 'Nerko One', cursive;
   text-decoration: none;
   font-size: 1.5em;
-  margin-left: 5vw;
-  display: inline-block;
+
 
 }
 
 
 .navbar-content a:hover {
-  color: #FFFFFF;
+
   background-color: #d0e5d3;
   height: 100%;
   width: 10vw;
+  text-align: center;
+  padding: 0 10px 0 10px;
 }
 
 /*---------------------- FIN BARRA DE NAVEGACIÓN -------------------*/
+
+
 /*---------------------- INDEX -------------------*/
 #welcome {
   background-color: transparent;
@@ -102,20 +105,23 @@ navbar {
   display: inline-block;
   text-align: center;
   margin-left: 22vw;
-  position: absolute;
+
 }
 
 #intro {
-  width: 30vw;
-  height: 7vh;
+  width: 20%;
+  height: 46vh;
   overflow: auto;
-  display: inline-block;
+  /* display: block; */
   background-color: #fed9d7;
-  margin: 4vh 32vw;
-  padding: 10px;
+  /* margin: 1vh 32vw; */
   border: 1em solid #F8B8B8;
-  z-index: 2;
+  /* z-index: 2; */
   color: #f3fefc;
+  font-size: 1.2em;
+  /* position: relative; */
+  padding: 2%;
+  line-height: 150%;
 }
 
 #mainbox {
@@ -140,20 +146,21 @@ navbar {
 
 #container {
   box-sizing: border-box;
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  z-index: 1;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  gap: 3%;
 }
 
 #toggleContainer {
-  height: 10vh;
+  height: 5vh;
   display: flex;
   /* justify-content: flex-end; */
   align-items: center;
   width: 22vw;
   position: relative;
-  top: 14vh;
+  /* top: 14vh; */
   left: 41vw;
 }
 
@@ -173,13 +180,12 @@ navbar {
 }
 
 #galleryView {
-  height: 80vh;
-  width: 100vw;
-  /*background: rgb(246, 210, 106);
-  background: linear-gradient(180deg, rgb(245 239 220) 0%, #bbeaf187 52%, #8ce5de 100%);*/
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 5vh;
 }
 
 #galleryContainer {
@@ -344,9 +350,11 @@ navbar {
 }
 
 /*---------------------- FIN INDEX-------------------*/
+
+
 /*---------------------- CONTACTO-------------------*/
 
-.contact-background {
+.contact {
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -355,32 +363,33 @@ navbar {
 
 }
 
-.contact-background::before {
+.contact::before {
   opacity: 0.3;
-  background-image: url(file:///D:/Inform%C3%A1tica/Little%20Realm/images/heart-wallpaper.jpg);
+  background-image: url(/images/heart-wallpaper.jpg);
   content: "";
   height: 100%;
   width: 100%;
   position: absolute;
 }
 
-.contact-box {
+.contact__box {
   width: 40vw;
   height: 50vh;
   position: relative;
   background-color: red;
   margin: 0 auto;
   top: 18vh;
+  display: flex;
 }
 
-.contact-data {
+.contact__box .data {
   width: 40%;
   height: 100%;
   background-color: #8ce5de;
-  float: left;
+
 }
 
-.contact-data span {
+.contact__box .data span {
   display: block;
   margin: 20px 0;
   overflow: auto;
@@ -389,14 +398,14 @@ navbar {
   color: #f6a09f;
 }
 
-.contact-form {
+.contact__box .form {
   width: 60%;
   height: 100%;
   background-color: #fcfefd;
-  float: right;
+
 }
 
-.contact-form span {
+.contact__box .form span {
   display: block;
   margin: 20px 0;
   overflow: auto;
@@ -458,19 +467,27 @@ aside {
 /*---------------------- FOOTER-------------------*/
 
 footer {
-  background-color: #eeddaa;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  height: 20vh;
-  left: 0;
+  background-color: rgb(238, 221, 170);
+    position: absolute;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    width: 100%;
+    bottom: 0px;
+    height: 20%;
+    left: 0px;
 }
 
-#footer_1 {
-  display: inline-block;
-  position: absolute;
-  margin: -10px 0px 0px 0px;
-  padding: 30px;
-  line-height: 30px;
+footer img {
+  height: 200px;
+}
 
+.footer_cont {
+  list-style-type: none;
+    color: white;
+    font-size: 1.2em;
+    /* padding: 30px; */
+    line-height: 5vh;
+    flex-direction: column;
+    display: flex;
 }
