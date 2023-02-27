@@ -8,7 +8,7 @@
 body {
   overflow-x: hidden;
   /* background: #f5efdb; */
-  font-family: 'Patrick Hand', cursive;
+  font-family: 'Patrick Hand', cursive !important;
   background: linear-gradient(180deg, rgb(245 239 220) 23%, #bbeaf1b0 37%, #8de4dc 82%);
   z-index: 1;
   width: 100%;
@@ -104,7 +104,7 @@ nav {
   z-index: 3;
   font-size: 3em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   justify-content: space-around;
   grid-template-areas: 
   ". welcome ."
