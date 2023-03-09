@@ -1,0 +1,12 @@
+{
+  "name": "little-realm",
+  "version": "1.0.0",
+  "description": "<div id=\"header\" text-align=\"center\">\r   <img src=\"https://i.ibb.co/T2jnH95/little-realm-fondo-transparente.png\"></img>\r   <h1>Little Realm Website</h1>\r   </div>\r   <p>This is a design for my online shop and a place where I can practice my website development.\r   It's still in construction as I gather all my resources and advance into understanding the enviroment and the languages.\r   <h2>Funcionalities</h2>\r   The functionalities I'm aiming for are:\r   <li>Responsive website</li>\r   <li>Database access</li>\r   <li>User sign-up</li>\r   <li>Profile data</li>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch assets/scss -o assets/css"
+  },
+  "author": "Moonstres",
+  "license": "ISC"
+}
