@@ -1,0 +1,197 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Patrick Hand", cursive !important;
+  background: linear-gradient(180deg, rgb(245, 239, 220) 23%, rgba(187, 234, 241, 0.6901960784) 37%, #8de4dc 82%);
+  width: 100%;
+  background-attachment: fixed;
+  position: relative;
+  /* min-height: 100vh; */
+}
+
+h1 {
+  font-family: "Nerko One", cursive;
+  color: #fcfefe;
+  text-shadow: #bbeaf1 -1px 4px 5px;
+  text-align: center;
+}
+
+label {
+  margin: 10px;
+}
+
+input {
+  float: right;
+}
+
+input[type=submit],
+input[type=reset] {
+  border: 4px solid #f8b8b8;
+  background-color: #f6a09f;
+  width: 10vw;
+  margin-left: 5%;
+  color: white;
+  float: initial;
+  position: relative;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  border: 2px solid #dbf7ef;
+  background-color: #8ce5de;
+  width: 10vw;
+  margin-left: 5%;
+  color: white;
+  position: relative;
+  height: 2vh;
+  padding: 2px;
+}
+
+textarea {
+  height: 100%;
+  width: 90%;
+}
+
+i {
+  margin-left: 5%;
+  padding: 10px;
+  margin-top: -10px;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.nav__content {
+  overflow: auto;
+  line-height: 33px;
+  background-color: #eeddaa;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+.nav__content a {
+  color: white;
+  font-family: "Nerko One", cursive;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.nav__content a:hover {
+  background-color: #d0e5d3;
+  height: 100%;
+  width: 10vw;
+  text-align: center;
+  padding: 0 10px 0 10px;
+}
+
+.intro {
+  z-index: 1;
+  font-size: 3em;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5%;
+  grid-template-areas: "intro carrusel";
+}
+.intro__box {
+  overflow: auto;
+  background-color: #fed9d7;
+  color: #f3fefc;
+  font-size: 1.2rem !important;
+  padding: 2%;
+  display: grid;
+  grid-area: intro;
+  border: 10px solid #efb7b6;
+  width: 30vw;
+}
+
+/*---------------------- CONTACTO-------------------*/
+.contact {
+  height: 70vh;
+  top: -1vh;
+  z-index: -1;
+  display: flex;
+}
+.contact__box {
+  width: 40vw;
+  height: 50vh;
+  position: relative;
+  background-color: #8ce5de;
+  margin: 0 auto;
+  top: 10vh;
+  display: flex;
+}
+.contact__box .form {
+  width: 60%;
+  height: 100%;
+  background-color: #fcfefd;
+}
+.contact__box .form span {
+  display: block;
+  margin: 20px 0;
+  overflow: auto;
+  padding: 0 1%;
+  width: 98%;
+  color: #8ce5de;
+}
+.contact__box .data {
+  width: 40%;
+  height: 100%;
+  background-color: #8ce5de;
+}
+.contact__box .data span {
+  display: block;
+  margin: 20px 0;
+  overflow: auto;
+  padding: 0 1%;
+  width: 98%;
+  color: #fcfefd;
+  text-align: center;
+}
+
+.footer__redes {
+  flex-grow: 1;
+  left: 10%;
+  position: relative;
+  color: white;
+  font-size: 1.2em;
+  width: 25%;
+  display: flex;
+  align-self: flex-end;
+}
+.footer__cont {
+  list-style-type: none;
+  color: white;
+  font-size: 1.2em;
+  flex-direction: column;
+  display: flex;
+  align-self: center;
+}
+
+footer {
+  background-color: rgb(238, 221, 170);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  margin-top: 100px;
+  flex-direction: row;
+}
+footer img {
+  background-color: #eeddaa;
+  border-radius: 50%;
+  padding: 10px;
+  position: relative;
+  top: -7vh;
+  flex-grow: 0;
+  width: 10%;
+}/*# sourceMappingURL=main.css.map */

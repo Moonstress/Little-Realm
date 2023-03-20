@@ -1,0 +1,26 @@
+
+.intro {
+    z-index: 1;
+    font-size: 3em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5%;
+    grid-template-areas:
+      "intro carrusel";
+
+      
+  &__box {
+    overflow: auto;
+    background-color: #fed9d7;
+    color: #f3fefc;
+    font-size: 1.2rem !important;
+    padding: 2%;
+    display: grid;
+    grid-area: intro;
+    border: 10px solid #efb7b6;
+    width: 30vw;
+  }
+  }
+   
+  
+  

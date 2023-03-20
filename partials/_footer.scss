@@ -1,0 +1,45 @@
+.footer {
+
+    &__redes {
+        flex-grow: 1;
+        left: 10%;
+        position: relative;
+        color: white;
+        font-size: 1.2em;
+        width: 25%;
+        display: flex;
+        align-self: flex-end;
+    }
+
+    &__cont {
+        list-style-type: none;
+        color: white;
+        font-size: 1.2em;
+        flex-direction: column;
+        display: flex;
+        align-self: center;
+    }
+}
+
+
+footer {
+    background-color: rgb(238, 221, 170);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    margin-top: 100px;
+    flex-direction: row;
+
+    img {
+        background-color: #eeddaa;
+        border-radius: 50%;
+        padding: 10px;
+        position: relative;
+        top: -7vh;
+        flex-grow: 0;
+        width: 10%;
+    }    
+
+
+}
