@@ -19,8 +19,6 @@
 
     }
 
-
-
     #welcome {
         font-size: 1.5em;
 
@@ -51,6 +49,8 @@
 
     footer {
         flex-direction: column;
+        position: relative;
+        margin-top: 100px;
 
         img {
             width: 100%;
@@ -61,7 +61,7 @@
     }
 
     .footer {
-
+        
 
         &__redes {
             width: 100%;
@@ -74,7 +74,6 @@
         }
     }
 
-
     .footer_cont li::before {
         content: " | ";
     }
@@ -82,37 +81,30 @@
     .contact__box {
         flex-direction: column;
         width: 100vw;
-        height: auto;
+        
 
         .form {
             display: flex;
             width: 100%;
+            height: auto;
         }
 
-
         .data {
-            display: flex;
-
+            width: 100%;
 
             span {
                 flex-direction: column;
-            }
-
-            
+            }            
         }
 
         input[type=text],
         input[type=email],
         textarea {
-            width: auto;
-
+           width: 30%;
+            height: 10%;
         }
-
     }
-
-
-
-
+}
     /*---------------------- END MOBILE -------------------*/
 
     /**** ANIMATIONS ***/
@@ -161,4 +153,3 @@
             opacity: 1;
         }
     }
-}
