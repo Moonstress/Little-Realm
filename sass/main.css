@@ -238,7 +238,7 @@ nav {
 
 /*---------------------- CONTACTO-------------------*/
 .contact {
-  height: 70vh;
+  height: 100vh;
   top: -1vh;
   z-index: -1;
   display: flex;
@@ -394,7 +394,6 @@ footer img {
   footer {
     flex-direction: column;
     position: relative;
-    margin-top: 100px;
   }
   footer li {
     display: block;
@@ -437,7 +436,7 @@ footer img {
   .contact__box .form {
     display: flex;
     width: 100%;
-    height: auto;
+    height: 380px;
   }
   .contact__box .data {
     width: 100%;
@@ -448,7 +447,7 @@ footer img {
   .contact__box input[type=text],
   .contact__box input[type=email],
   .contact__box textarea {
-    width: 30%;
+    width: 58%;
     height: 10%;
   }
 }

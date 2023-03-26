@@ -50,7 +50,7 @@
     footer {
         flex-direction: column;
         position: relative;
-        margin-top: 100px;
+       
 
 
         li {
@@ -108,7 +108,7 @@
         .form {
             display: flex;
             width: 100%;
-            height: auto;
+            height: 380px;
         }
 
         .data {
@@ -122,7 +122,7 @@
         input[type=text],
         input[type=email],
         textarea {
-            width: 30%;
+            width: 58%;
             height: 10%;
         }
     }
