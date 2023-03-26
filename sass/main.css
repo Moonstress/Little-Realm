@@ -24,8 +24,9 @@ h1 {
 h2 {
   font-family: "Nerko One", cursive;
   color: #fcfefe;
-  text-shadow: #bbeaf1 -1px 4px 5px;
   background-color: pink;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 label {
@@ -71,6 +72,12 @@ i {
   margin-top: -10px;
 }
 
+.faq {
+  background-color: #f59797;
+  padding: 10px;
+  color: white;
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -112,7 +119,7 @@ nav {
 .intro__box {
   overflow: auto;
   background-color: #fed9d7;
-  color: #f3fefc;
+  color: #d39897;
   font-size: 1.2rem !important;
   padding: 2%;
   display: grid;
@@ -245,7 +252,7 @@ nav {
 }
 .contact__box {
   width: 40vw;
-  height: 50vh;
+  height: 70vh;
   position: relative;
   background-color: #8ce5de;
   margin: 0 auto;
@@ -312,7 +319,7 @@ nav {
   flex-grow: 1;
   left: 10%;
   position: relative;
-  color: white;
+  color: #fefadd;
   font-size: 1.2em;
   width: 25%;
   display: flex;
@@ -320,7 +327,7 @@ nav {
 }
 .footer__cont {
   list-style-type: none;
-  color: white;
+  color: #fefadd;
   font-size: 1.2em;
   flex-direction: column;
   display: flex;
@@ -344,7 +351,7 @@ footer li {
 footer li a {
   text-decoration: none;
   font-weight: 600;
-  color: white;
+  color: #fefadd;
 }
 footer li a:hover {
   color: pink;

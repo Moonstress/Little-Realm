@@ -4,7 +4,7 @@
         flex-grow: 1;
         left: 10%;
         position: relative;
-        color: white;
+        color: #fefadd;
         font-size: 1.2em;
         width: 25%;
         display: flex;
@@ -13,7 +13,7 @@
 
     &__cont {
         list-style-type: none;
-        color: white;
+        color:#fefadd;
         font-size: 1.2em;
         flex-direction: column;
         display: flex;
@@ -39,7 +39,7 @@ footer {
         a {
             text-decoration: none;
             font-weight: 600;
-            color: white;
+            color: #fefadd;
 
             &:hover {
                 color: pink;
