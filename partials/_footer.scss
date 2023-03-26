@@ -31,6 +31,22 @@ footer {
     margin-top: 100px;
     flex-direction: row;
 
+    li {
+        display: block;
+        text-align: center;
+        padding: 10px;
+
+        a {
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+
+            &:hover {
+                color: pink;
+            }
+        }
+    }
+
     img {
         background-color: #eeddaa;
         border-radius: 50%;
@@ -42,4 +58,4 @@ footer {
     }    
 
 
-}
+    }
