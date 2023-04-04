@@ -1,7 +1,7 @@
 /*---------------------- CONTACTO-------------------*/
 
 .contact {  
-    height: 100vh;
+    height: 80vh;
     top: -1vh;
     z-index: -1;
     display: flex;
@@ -12,8 +12,8 @@
         position: relative;
         background-color: #8ce5de;;
         margin: 0 auto;
-        top: 10vh;
         display: flex;
+        top: 10vh;
 
         .form {
             width: 60%;

@@ -4,16 +4,18 @@
         flex-grow: 1;
         left: 10%;
         position: relative;
-        color: #fefadd;
+        color: #ffffff;
         font-size: 1.2em;
         width: 25%;
         display: flex;
         align-self: flex-end;
+        font-weight: 600;
+        letter-spacing: 4px;
     }
 
     &__cont {
         list-style-type: none;
-        color:#fefadd;
+        color: #fefadd;
         font-size: 1.2em;
         flex-direction: column;
         display: flex;
@@ -39,10 +41,13 @@ footer {
         a {
             text-decoration: none;
             font-weight: 600;
-            color: #fefadd;
+            color: #f8dad6;
+            letter-spacing: 1px;
+            background-color: #f39897;
+            padding: 4px;
 
             &:hover {
-                color: pink;
+                color: #6bdfd4;
             }
         }
     }
@@ -55,7 +60,7 @@ footer {
         top: -7vh;
         flex-grow: 0;
         width: 10%;
-    }    
-
-
     }
+
+
+}
