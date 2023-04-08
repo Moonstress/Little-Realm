@@ -39,7 +39,7 @@ input {
 input[type=submit],
 input[type=reset] {
   border: 4px solid #f8b8b8;
-  background-color: #f6a09f;
+  background-color: #f59797;
   color: #fcfefe;
   float: initial;
   position: relative;
@@ -89,7 +89,7 @@ nav {
   gap: 5%;
 }
 .nav__content a {
-  color: white;
+  color: #fcfefe;
   font-family: "Nerko One", cursive;
   text-decoration: none;
   font-size: 1.5em;
@@ -113,7 +113,7 @@ nav {
 .intro__box {
   overflow: auto;
   background-color: #fed9d7;
-  color: #d39897;
+  color: #f59797;
   font-size: 1.2rem !important;
   padding: 2%;
   display: grid;
@@ -151,7 +151,7 @@ nav {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
-  background: #f8b5b7;
+  background: #f59797;
   color: #fff;
   padding: 3px 10px;
 }
@@ -284,9 +284,9 @@ nav {
   padding: 50px;
 }
 .about__box {
-  background-color: pink;
+  background-color: #f59797;
   padding: 20px;
-  color: white;
+  color: #fcfefe;
   font-size: 1.5em;
 }
 .about__box__content {
@@ -306,11 +306,9 @@ nav {
 
 .footer__redes {
   flex-grow: 1;
-  left: 10%;
   position: relative;
-  color: #ffffff;
+  color: #fcfefe;
   font-size: 1.2em;
-  width: 25%;
   display: flex;
   align-self: flex-end;
   font-weight: 600;
@@ -345,7 +343,7 @@ footer li a {
   font-weight: 600;
   color: #f8dad6;
   letter-spacing: 1px;
-  background-color: #f39897;
+  background-color: #f59797;
   padding: 4px;
 }
 footer li a:hover {

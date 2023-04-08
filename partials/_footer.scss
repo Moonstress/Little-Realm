@@ -2,11 +2,9 @@
 
     &__redes {
         flex-grow: 1;
-        left: 10%;
         position: relative;
-        color: #ffffff;
+        color: $white;
         font-size: 1.2em;
-        width: 25%;
         display: flex;
         align-self: flex-end;
         font-weight: 600;
@@ -44,7 +42,7 @@ footer {
             font-weight: 600;
             color: #f8dad6;
             letter-spacing: 1px;
-            background-color: #f39897;
+            background-color: $light-pink;
             padding: 4px;
 
             &:hover {
