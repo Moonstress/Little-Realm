@@ -1,3 +1,4 @@
+@import "../partials/variables";
 @import "../partials/general";
 @import "../partials/nav";
 @import "../partials/index";
@@ -8,7 +9,4 @@
 @import "../partials/mediaQueries";
 
 
-$background: linear-gradient(180deg, rgb(245 239 220) 23%, #bbeaf1b0 37%, #8de4dc 82%);
-$light-pink: #f59797;
-$white: #fcfefe;
-$font-Nerko: 'Nerko One', cursive;
+
