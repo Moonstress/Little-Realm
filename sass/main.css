@@ -261,7 +261,8 @@ nav {
 .contact {
   z-index: -1;
   display: flex;
-  padding-top: 8%;
+  padding-top: 6.4%;
+  padding-bottom: 6%;
 }
 .contact__box {
   background-color: #8ce5de;
@@ -355,7 +356,6 @@ footer {
   margin-top: 100px;
   flex-direction: row;
   font-size: 0.8em;
-  position: absolute;
 }
 footer li {
   display: block;
