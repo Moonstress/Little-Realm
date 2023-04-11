@@ -52,8 +52,8 @@ input[type=reset] {
 
 input[type=text],
 input[type=email],
-input[type=select],
-textarea {
+textarea,
+select {
   border: 2px solid #dbf7ef;
   background-color: #8ce5de;
   color: $white;

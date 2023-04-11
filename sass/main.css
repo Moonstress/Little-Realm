@@ -1,3 +1,4 @@
+/*------------CAROUSEL-----*/
 * {
   padding: 0;
   margin: 0;
@@ -47,8 +48,8 @@ input[type=reset] {
 
 input[type=text],
 input[type=email],
-input[type=select],
-textarea {
+textarea,
+select {
   border: 2px solid #dbf7ef;
   background-color: #8ce5de;
   color: #fcfefe;
@@ -269,7 +270,6 @@ nav {
 .contact__box .data span {
   display: block;
   margin: 20px 0;
-  overflow: auto;
   padding: 0 1%;
   width: 98%;
   color: #fcfefd;
@@ -289,6 +289,12 @@ nav {
   color: #fcfefe;
   font-size: 1.5em;
 }
+.about__box__img {
+  justify-self: center;
+  height: 300px;
+  display: flex;
+  margin-top: -30px;
+}
 .about__box__content {
   display: inline-block;
   align-items: center;
@@ -298,10 +304,9 @@ nav {
   background-color: #e1f5f4;
   padding: 20px;
   overflow: auto;
-}
-.about__img {
-  background-color: red;
-  width: 20%;
+  color: #8ae5dd;
+  line-height: 2em;
+  font-size: 1.2em;
 }
 
 .footer__redes {
@@ -390,6 +395,19 @@ footer img {
   .product-card {
     width: 100vw;
     display: block;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about__box__img {
+    display: none;
+  }
+  .about__box__content {
+    width: 100%;
+    height: auto;
+  }
+  .about__content {
+    width: 100%;
   }
   footer {
     flex-direction: column;

@@ -47,6 +47,30 @@
 
     }
 
+    .about {
+         flex-direction: column-reverse;
+
+         &__box 
+         {
+            &__img{
+                display: none;
+                
+            }
+            &__content {
+                width: 100%;
+                height: auto;
+            }
+        
+            
+        }
+
+         &__content {
+            width: 100%;
+        }
+        
+    }
+
+
     footer {
         flex-direction: column;
         position: relative;

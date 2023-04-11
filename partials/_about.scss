@@ -13,6 +13,13 @@
         color: $white;
         font-size: 1.5em;
 
+        &__img {
+            justify-self: center;
+            height: 300px;
+            display: flex;
+            margin-top: -30px;
+        }
+
         &__content {
             display: inline-block;
             align-items: center;
@@ -22,12 +29,12 @@
             background-color: #e1f5f4;
             padding: 20px;
             overflow: auto;
+            color: #8ae5dd;
+            line-height: 2em;
+            font-size: 1.2em;
         }
             
         }
 
-        &__img {
-            background-color: red;
-            width: 20%;
-        }
+        
     }
