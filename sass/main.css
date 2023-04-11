@@ -10,7 +10,7 @@ body {
   font-family: "Patrick Hand", cursive !important;
   background: linear-gradient(180deg, rgb(245, 239, 220) 23%, rgba(187, 234, 241, 0.6901960784) 37%, #8de4dc 82%);
   width: 100%;
-  background-attachment: fixed;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -121,6 +121,25 @@ nav {
   grid-area: intro;
   border: 10px solid #efb7b6;
   width: 30vw;
+}
+
+.carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
+  filter: none;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: #efb7b6;
+  height: 10px;
+  width: 100px;
 }
 
 /*---------------------- START PRODUCT CARDS-------------------*/
@@ -242,7 +261,7 @@ nav {
 .contact {
   z-index: -1;
   display: flex;
-  padding-top: 40px;
+  padding-top: 8%;
 }
 .contact__box {
   background-color: #8ce5de;
@@ -337,6 +356,7 @@ footer {
   margin-top: 100px;
   flex-direction: row;
   font-size: 0.8em;
+  position: absolute;
 }
 footer li {
   display: block;

@@ -9,7 +9,7 @@ body {
   font-family: 'Patrick Hand', cursive !important;
   background: $background;
   width: 100%;
-  background-attachment: fixed;
+  min-height: 100vh;
   position: relative;
 
 }

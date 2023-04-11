@@ -21,6 +21,26 @@
     width: 30vw;
   }
   }
+
+  .carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
+    filter:  none ;
+}
+
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+}
+
+  .carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: #efb7b6;
+    height: 10px;
+    width: 100px;
+}
    
   
   
