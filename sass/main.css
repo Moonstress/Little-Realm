@@ -310,9 +310,8 @@ nav {
 }
 .about__box__img {
   justify-self: center;
-  height: 300px;
+  height: 40vh;
   display: flex;
-  margin-top: -30px;
 }
 .about__box__content {
   display: inline-block;
