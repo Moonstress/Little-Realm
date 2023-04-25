@@ -11,27 +11,59 @@ function calculatePrice() {
    let paciColor = document.getElementById("paciColor");
    let paciColorPrice = paciColor.options[paciColor.selectedIndex].value;
 
-    
+
    let decoLevel = document.getElementById("decoLevel");
    let decoLevelPrice = decoLevel.options[decoLevel.selectedIndex].value;
 
+   let addon0True = document.getElementById('addons0').checked;
+   let addon1True = document.getElementById('addons1').checked;
+   let addon2True = document.getElementById('addons2').checked;
+   let addon3True = document.getElementById('addons3').checked;
+   let addon4True = document.getElementById('addons4').checked;
+
+
+   let decoAddonValue =0;
+
+   if ((decoLevelPrice == 25 || decoLevelPrice == 30) && addon1True == true ) {   
+      decoAddonValue= 2;
+   }
+   else if ((decoLevelPrice == 25 || decoLevelPrice == 30) && addon2True == true ) {   
+      decoAddonValue= 4;
+
+   } else if ((decoLevelPrice == 25 || decoLevelPrice == 30) && addon3True == true ) {   
+      decoAddonValue= 6;
+   }
+
+   else if ((decoLevelPrice == 25 || decoLevelPrice == 30) && addon4True == true ) {   
+      decoAddonValue= 8;
+   }
+
+   else if (decoLevelPrice == 37 && addon2True == true ) {   
+      decoAddonValue= 2;
+   }
+   else if (decoLevelPrice == 37 && addon3True == true ) {   
+      decoAddonValue= 4;
+
+   }
+
+   else if (decoLevelPrice == 37 && addon5True == true ) {   
+      decoAddonValue= 4;
+   }
    
-   /*if (decoLevelValue == "simple" ) {
-       decoLevelPrice = 25;    
 
-   } else if (decoLevelValue == "normal") {
-      decoLevelPrice = 30;
-   }
-   else if (decoLevelValue == "premium") {
-      decoLevelPrice = 35;
+   else if (decoLevelPrice == 45 && addon3True == true ) {   
+      decoAddonValue= 2;
    }
 
-   else if (decoLevelValue == "deluxe") {
-      decoLevelPrice = 40;
-   }*/
+   else if (decoLevelPrice == 45 && addon4True == true ) {   
+      decoAddonValue=4;   }
 
-   let finalPrice = parseFloat(decoLevelPrice) + parseFloat(paciColorPrice);
-   alert (finalPrice);
+
+
+   let finalPrice = parseFloat(decoLevelPrice) + parseFloat(paciColorPrice)
+    + parseFloat(decoAddonValue);
+    alert(finalPrice);
+
    /*document.getElementById("result").innerHTML == finalPrice;*/
 
 }
