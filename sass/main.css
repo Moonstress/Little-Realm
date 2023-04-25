@@ -29,6 +29,26 @@ h2 {
   margin-top: 20px;
 }
 
+h3 {
+  font-family: "Nerko One", cursive;
+  color: #fcfefe;
+  background-color: #f59797;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+h4 {
+  font-family: "Nerko One", cursive;
+  color: #fcfefe;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 1.2em;
+  display: inline-block;
+  width: 50%;
+}
+
 label {
   margin: 10px;
 }
@@ -38,12 +58,14 @@ input {
 }
 
 input[type=submit],
-input[type=reset] {
+input[type=reset],
+button {
   border: 4px solid #f8b8b8;
   background-color: #f59797;
   color: #fcfefe;
   float: initial;
   position: relative;
+  width: auto;
 }
 
 input[type=text],
@@ -326,6 +348,33 @@ nav {
   color: #8ae5dd;
   line-height: 2em;
   font-size: 1.2em;
+}
+
+.quoting {
+  background-color: #f59797;
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+.custom-form {
+  background-color: #f4bcb6;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.custom-form-cont2 {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+.custom-form select {
+  width: 40%;
+}
+.custom-form .form-check {
+  display: flex;
 }
 
 .footer__redes {

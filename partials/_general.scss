@@ -31,6 +31,29 @@ h2 {
 
 }
 
+h3 {
+  font-family: $font-Nerko;
+  color: $white;
+  background-color: $light-pink;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1.4em;
+  text-align: center;
+
+}
+
+h4 {
+  font-family: $font-Nerko;
+  color: $white;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 1.2em;
+  display: inline-block;
+  width: 50%;
+
+}
+
+
 label {
   margin: 10px;
 }
@@ -40,13 +63,15 @@ input {
 }
 
 input[type=submit],
-input[type=reset] {
+input[type=reset],
+button {
 
   border: 4px solid #f8b8b8;
   background-color: $light-pink;
   color: $white;
   float: initial;
   position: relative;
+  width: auto;
 
 }
 

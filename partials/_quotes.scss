@@ -1,0 +1,35 @@
+.quoting {
+    background-color: $light-pink;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+.custom-form {
+    background-color: #f4bcb6;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+
+    &-cont2 {
+        width: 100%;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+
+       select{
+        width: 40%;
+        
+    }
+
+    .form-check {
+        display: flex;
+        
+        
+    }
+   
+
+}
