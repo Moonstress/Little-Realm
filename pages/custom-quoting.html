@@ -27,6 +27,7 @@
 
     <!-- Bootstrap Font Icon CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script defer src="../js/main.js"></script>
 
 
 </head>
@@ -114,12 +115,12 @@
             
             <div class="custom-form-cont">
                 <h4>Select First Add On Difficulty:</h4>
-                <select id="addon1Dif">   
-                    <option value=0>None</option>                 
-                    <option value=0>Easy</option>
-                    <option value=1>Intermediate</option>
-                    <option value=1.5>Medium</option>
-                    <option value=2>Hard</option>
+                <select id="addon1Dif" >   
+                    <option value=0 class="addons">None</option>                 
+                    <option value=0 class="addons">Easy</option>
+                    <option value=1 class="addons">Intermediate</option>
+                    <option value=1.5 class="addons">Medium</option>
+                    <option value=2 class="addons">Hard</option>
                 </select></div>
             <div class="custom-form-cont">
                 <h4>Select Second Add On Difficulty:</h4>
@@ -151,7 +152,7 @@
                     <option value=2>Hard</option>
                 </select></div>
 
-            <button id="result" onclick="calculatePrice()" type="button">Calculate</button>
+            <button id="result" onclick="alertUnselected(),calculatePrice()" type="button">Calculate</button>
         </form>
 
     </div>
@@ -180,7 +181,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script src="../js/main.js"></script>
+    
 
 
 </body>
