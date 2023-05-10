@@ -91,13 +91,13 @@ function calculateaddonsPrice() {
    return paci.calculateaddonsPrice;
 }
 
-//Calculate Extra Addons Difficulty
+//Calculate Extra Addons Difficulty: This gets the class for getting the selected value on the function calculateAddonsDifficulty()
 let addonsDif1 = document.getElementsByClassName("addons1");
 let addonsDif2 = document.getElementsByClassName("addons2");
 let addonsDif3 = document.getElementsByClassName("addons3");
 let addonsDif4 = document.getElementsByClassName("addons4");
 
-
+//This function calculates the value of the difficulty of each of the four options of Addons
 function calculateAddonsDifficulty(addon) {
    for (let i = 0; i < addon.length; i++) {
       if (addon[i].selected == true) {
@@ -115,6 +115,7 @@ function setAddonsDif() {
    addonsDif[3] = calculateAddonsDifficulty(addonsDif4);
 }
 
+//This function sums all the extra price of the difficulties to add into our paci object
 function sum() {
    let sum = 0;
    addonsDif.forEach(num => {
@@ -125,7 +126,6 @@ function sum() {
    let addonsDifTotal = parseFloat(sum);
    paci.addonsDifTotal = addonsDifTotal;
 }
-
 
 function printPaci() {
    calculatePaciLevel();
