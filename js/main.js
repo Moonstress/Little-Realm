@@ -1,7 +1,7 @@
 /*-----------QUOTATION--------*/
 //This is a quotation system for a custom pacifier
 
-//CLASES
+//CLASES: The pacifier has a price according to its level of decoration, the tier of the base pacifier, the ammount of addons, the difficulty of the centerpiece and the individual difficulty of all the extra add ons
 class Pacifier {
    constructor(level, tier, addons, addonsPrice, centerDif, addonsDifTotal) {
       this.level = level;
@@ -121,8 +121,7 @@ function sum() {
    addonsDif.forEach(num => {
       return sum += parseFloat(num);
       
-   })
-   
+   })   
    let addonsDifTotal = parseFloat(sum);
    paci.addonsDifTotal = addonsDifTotal;
 }
