@@ -1,4 +1,5 @@
 /*-----------QUOTATION--------*/
+//This is a quotation system for a custom pacifier
 
 //CLASES
 class Pacifier {
@@ -24,16 +25,17 @@ const addon2 = new Addons("0");
 const addon3 = new Addons("0");
 const addon4 = new Addons("0");
 
+
 //FUNCIONES AUXILIARES
 //ALERT
 function alertUnselected() {
-   while (!document.getElementById('addons0').checked && !document.getElementById('addons1').checked && !document.getElementById('addons2').checked && !document.getElementById('addons3').checked && !document.getElementById('addons4').checked) {
+   if (!document.getElementById('addons0').checked && !document.getElementById('addons1').checked && !document.getElementById('addons2').checked && !document.getElementById('addons3').checked && !document.getElementById('addons4').checked) {
       window.alert("You have not selected any Add ons number");
-      window.setTimeout(hideFieldMessages, 5000);
+      
    }
 }
 
-//PACI LEVEL PRICE
+//PACI LEVEL PRICE: It calculates the level price depending on the complexity of the decoration level
 function calculatePaciLevel() {
    let decoLevel = document.getElementById("decoLevel");
    let decoLevelPrice = decoLevel.options[decoLevel.selectedIndex].value;
@@ -42,7 +44,7 @@ function calculatePaciLevel() {
 
 }
 
-//TIER PRICE
+//TIER PRICE: This adds an extra price if the base color of the pacifier is from a higher tier than 1
 function calculateTierPrice() {
    let paciColor = document.getElementById("paciColor");
    let paciColorPrice = paciColor.options[paciColor.selectedIndex].value;
@@ -50,7 +52,7 @@ function calculateTierPrice() {
    return paci.tier;
 }
 
-//TIER PRICE
+//CENTER DIFFICULTY: This adds an extra price if the difficulty of the handmade centerpiece for the pacifier is more higher than usual
 function calculateCenterDif() {
    let centerDif = document.getElementById("centerDif");
    let centerDifPrice = centerDif.options[centerDif.selectedIndex].value;
@@ -58,7 +60,7 @@ function calculateCenterDif() {
    return paci.centerDif;
 }
 
-//CALCULATE ADD ONS
+//CALCULATE ADD ONS: This calculate how many extra add ons, usually clay pieces the pacifier has
 
 function calculateAddons() {
    if (document.getElementById('addons1').checked === true) {
@@ -73,7 +75,7 @@ function calculateAddons() {
    return paci.addons;
 }
 
-//CALCULATE ADDONS DISCOUNT
+//CALCULATE ADDONS DISCOUNT: This calculates the discount, depending on the pacifier decoration level, since for some levels, a number of add ons is free
 
 function calculateaddonsPrice() {
    if ((paci.level == 25 || paci.level == 30) && paci.addons == 1) {
@@ -98,7 +100,7 @@ function calculateaddonsPrice() {
    return paci.calculateaddonsPrice;
 }
 
-//Calculate First Addon Difficulty
+//Calculate Extra Addons Difficulty
 let addonsDif1 = document.getElementsByClassName("addons1");
 let addonsDif2 = document.getElementsByClassName("addons2");
 let addonsDif3 = document.getElementsByClassName("addons3");
@@ -114,7 +116,7 @@ function calculateAddonsDifficulty(addon) {
    }
 }
 
-// Set Addons Prices
+// Set Addons Prices: This set the Addons prices, depending on their difficulty
 function setAddonsDif(){
    addon1.difficulty = calculateAddonsDifficulty(addonsDif1);
    addon2.difficulty = calculateAddonsDifficulty(addonsDif2);

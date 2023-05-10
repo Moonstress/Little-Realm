@@ -10,4 +10,5 @@
   <li>Database access</li>
   <li>User sign-up</li>
   <li>Profile data</li>
+  <li>Quotation Functionality</li>
   
