@@ -3,35 +3,26 @@
 
 //CLASES
 class Pacifier {
-   constructor(level, tier, addons, addonsPrice, centerDif) {
+   constructor(level, tier, addons, addonsPrice, centerDif, addonsDifTotal) {
       this.level = level;
       this.tier = tier;
       this.addons = addons;
       this.addonsPrice = addonsPrice;
       this.centerDif = centerDif;
+      this.addonsDifTotal = this.addonsDifTotal;
    }
 }
 
-class Addons {
-   constructor(difficulty) {
-      this.difficulty = difficulty;      
-   }
-}
+const addonsDif = [];
 
 const paci = new Pacifier("0");
-
-const addon1 = new Addons("0");
-const addon2 = new Addons("0");
-const addon3 = new Addons("0");
-const addon4 = new Addons("0");
-
 
 //FUNCIONES AUXILIARES
 //ALERT
 function alertUnselected() {
    if (!document.getElementById('addons0').checked && !document.getElementById('addons1').checked && !document.getElementById('addons2').checked && !document.getElementById('addons3').checked && !document.getElementById('addons4').checked) {
       window.alert("You have not selected any Add ons number");
-      
+
    }
 }
 
@@ -117,12 +108,24 @@ function calculateAddonsDifficulty(addon) {
 }
 
 // Set Addons Prices: This set the Addons prices, depending on their difficulty
-function setAddonsDif(){
-   addon1.difficulty = calculateAddonsDifficulty(addonsDif1);
-   addon2.difficulty = calculateAddonsDifficulty(addonsDif2);
-   addon3.difficulty = calculateAddonsDifficulty(addonsDif3);
-   addon4.difficulty = calculateAddonsDifficulty(addonsDif4);
+function setAddonsDif() {
+   addonsDif[0] = calculateAddonsDifficulty(addonsDif1);
+   addonsDif[1] = calculateAddonsDifficulty(addonsDif2);
+   addonsDif[2] = calculateAddonsDifficulty(addonsDif3);
+   addonsDif[3] = calculateAddonsDifficulty(addonsDif4);
 }
+
+function sum() {
+   let sum = 0;
+   addonsDif.forEach(num => {
+      return sum += parseFloat(num);
+      
+   })
+   
+   let addonsDifTotal = parseFloat(sum);
+   paci.addonsDifTotal = addonsDifTotal;
+}
+
 
 function printPaci() {
    calculatePaciLevel();
@@ -130,17 +133,15 @@ function printPaci() {
    calculateCenterDif();
    calculateAddons();
    setAddonsDif();
+   sum();
    calculateaddonsPrice(paci.addons);
    console.log(paci);
-   console.log(addon1);
-   console.log(addon2);
-   console.log(addon3);
-   console.log(addon4);
+
 }
 
 function calculatePrice() {
-   let finalPrice = parseInt(paci.level) + parseFloat(paci.tier) + parseFloat(paci.centerDif) + parseInt(paci.addonsPrice) + parseFloat(addon1.difficulty) + parseFloat(addon2.difficulty)  + parseFloat(addon3.difficulty) + parseFloat(addon4.difficulty);
-   alert(finalPrice);
+ let finalPrice = parseInt(paci.level) + parseFloat(paci.tier) + parseFloat(paci.centerDif) + parseInt(paci.addonsPrice) + parseFloat(paci.addonsDifTotal);
+  alert(finalPrice);
 }
 
 /*document.getElementById("result").innerHTML == finalPrice;*/
