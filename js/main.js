@@ -19,11 +19,16 @@ const paci = new Pacifier("0");
 
 //FUNCIONES AUXILIARES
 //ALERT
-function alertUnselected() {
-   if (!document.getElementById('addons0').checked && !document.getElementById('addons1').checked && !document.getElementById('addons2').checked && !document.getElementById('addons3').checked && !document.getElementById('addons4').checked) {
-      window.alert("You have not selected any Add ons number");
 
-   }
+function alertUnselected() {
+   while (!document.getElementById('addons0').checked && !document.getElementById('addons1').checked && !document.getElementById('addons2').checked && !document.getElementById('addons3').checked && !document.getElementById('addons4').checked ) {            
+      window.alert("You have not selected any Add ons number")
+      setTimeout(() => {
+         
+      }, timeout);
+      
+        
+         }
 }
 
 //PACI LEVEL PRICE: It calculates the level price depending on the complexity of the decoration level

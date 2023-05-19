@@ -3,9 +3,26 @@ $light-pink: #f59797;
 $white: #fcfefe;
 $font-Nerko: 'Nerko One', cursive;
 
-/*------------CAROUSEL-----*/
 
+$carousel-indicator-height: 0px !default;
 
-$carousel-indicator-height:         30px !default;
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #f59797;
+    /* border: 1px solid #ced4da; */
+    border-radius: .25rem;
+    width: 25%;
+    margin-right: 10px;
+    /* text-align: center; */
+    color: $white;
+}
 
 
