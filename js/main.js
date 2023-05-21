@@ -23,10 +23,8 @@ const paci = new Pacifier("0");
 function alertUnselected() {
    while (!document.getElementById('addons0').checked && !document.getElementById('addons1').checked && !document.getElementById('addons2').checked && !document.getElementById('addons3').checked && !document.getElementById('addons4').checked ) {            
       window.alert("You have not selected any Add ons number")
-      setTimeout(() => {
-         
-      }, timeout);
-      
+      setTimeout(() => {         
+      }, timeout);     
         
          }
 }
@@ -53,6 +51,7 @@ function calculateCenterDif() {
    let centerDif = document.getElementById("centerDif");
    let centerDifPrice = centerDif.options[centerDif.selectedIndex].value;
    paci.centerDif = centerDifPrice;
+   let description = prompt("Describe your centerpiece as detailed as you can");
    return paci.centerDif;
 }
 
