@@ -16,17 +16,19 @@ class Pacifier {
 const addonsDif = [];
 
 const paci = new Pacifier("0");
+const quotations = [];
+quotations.push(paci);
 
 //FUNCIONES AUXILIARES
 //ALERT
 
 function alertUnselected() {
-   while (!document.getElementById('addons0').checked && !document.getElementById('addons1').checked && !document.getElementById('addons2').checked && !document.getElementById('addons3').checked && !document.getElementById('addons4').checked ) {            
+   while (!document.getElementById('addons0').checked && !document.getElementById('addons1').checked && !document.getElementById('addons2').checked && !document.getElementById('addons3').checked && !document.getElementById('addons4').checked) {
       window.alert("You have not selected any Add ons number")
-      setTimeout(() => {         
-      }, timeout);     
-        
-         }
+      setTimeout(() => {
+      }, timeout);
+
+   }
 }
 
 //PACI LEVEL PRICE: It calculates the level price depending on the complexity of the decoration level
@@ -50,8 +52,7 @@ function calculateTierPrice() {
 function calculateCenterDif() {
    let centerDif = document.getElementById("centerDif");
    let centerDifPrice = centerDif.options[centerDif.selectedIndex].value;
-   paci.centerDif = centerDifPrice;
-   let description = prompt("Describe your centerpiece as detailed as you can");
+   paci.centerDif = centerDifPrice;   
    return paci.centerDif;
 }
 
@@ -124,11 +125,12 @@ function sum() {
    let sum = 0;
    addonsDif.forEach(num => {
       return sum += parseFloat(num);
-      
-   })   
+
+   })
    let addonsDifTotal = parseFloat(sum);
    paci.addonsDifTotal = addonsDifTotal;
 }
+
 
 function printPaci() {
    calculatePaciLevel();
@@ -143,8 +145,13 @@ function printPaci() {
 }
 
 function calculatePrice() {
- let finalPrice = parseInt(paci.level) + parseFloat(paci.tier) + parseFloat(paci.centerDif) + parseInt(paci.addonsPrice) + parseFloat(paci.addonsDifTotal);
-  alert(finalPrice);
+   let description = prompt("Describe your centerpiece as detailed as you can");
+   document.getElementById("paci-desc").innerHTML = description;
+   let finalPrice = parseInt(paci.level) + parseFloat(paci.tier) + parseFloat(paci.centerDif) + parseInt(paci.addonsPrice) + parseFloat(paci.addonsDifTotal);
+   alert(finalPrice);
+   const quotationsJSON = JSON.stringify(quotations);
+   localStorage.setItem('user', JSON.stringify(quotations));
+   localStorage.getItem('user');   
 }
 
 /*document.getElementById("result").innerHTML == finalPrice;*/
