@@ -60,11 +60,10 @@ h3 {
 h4 {
   font-family: "Nerko One", cursive;
   color: #fcfefe;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 10px;
+  margin-top: 5px;
   font-size: 1.2em;
   display: inline-block;
-  width: 50%;
 }
 
 label {
@@ -84,6 +83,7 @@ button {
   float: initial;
   position: relative;
   width: auto;
+  padding: 10px;
 }
 
 input[type=text],
@@ -251,6 +251,27 @@ nav {
   color: #fbb72c;
 }
 
+.product-details2 {
+  padding: 10px;
+}
+.product-details2 p {
+  font-size: 15px;
+  line-height: 22px;
+  color: #999;
+}
+.product-details2 h4 a {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  color: #363636;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.product-details2 h4 ahover {
+  color: #fbb72c;
+}
+
 .product-catagory {
   display: block;
   font-size: 12px;
@@ -378,7 +399,6 @@ nav {
   background-color: #f4bcb6;
   display: flex;
   flex-direction: column;
-  width: 50%;
   margin: 0 auto;
   padding: 20px;
 }

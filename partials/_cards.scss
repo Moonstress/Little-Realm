@@ -73,6 +73,29 @@
     }
 }
 
+.product-details2 {
+    padding: 10px;
+
+    p {
+        font-size: 15px;
+        line-height: 22px;
+        color: #999;
+    }
+
+    h4 a {
+        font-weight: 500;
+        display: block;
+        margin-bottom: 18px;
+        text-transform: uppercase;
+        color: #363636;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &hover {
+            color: #fbb72c;
+        }
+    }
+}
 .product-catagory {
     display: block;
     font-size: 12px;

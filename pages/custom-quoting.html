@@ -47,137 +47,240 @@
     </nav>
     <h1>CUSTOM PACIFIER QUOTATION</h1>
     <!-- <small>Get an approximate price for the pacifier of your dreams!</small> -->
-    <div class="custom-form container-fluid>">
-        <h3>Main Details</h3>
-        <form method="post">
-            <div class="custom-form-cont">
-                <h4>Select Level of Decoration:</h4>
-                <select class="deco-level" id="decoLevel">
-                    <option value=25>Simple</option>
-                    <option value=30>Normal</option>
-                    <option value=37>Premium</option>
-                    <option value=45>Deluxe</option>
-                </select>
-            </div>
-            <div class="custom-form-cont">
-                <h4>Select your Pacifier Color Tier:</h4>
-                <select id="paciColor">
-                    <option selected value=0>Tier one</option>
-                    <option value=0.5>Tier Two</option>
-                    <option value=1>Tier Three</option>
-                </select>
+    <div class="container-xxl">
+        <div class="row">
+            <div class="col">
+                <div class="custom-form">
+                    <h3>Main Details</h3>
+                    <form method="post">
+                        <div class="d-flex justify-content-between">
+                            <h4>Select Level of Decoration:</h4>
+                            <select class="deco-level" id="decoLevel">
+                                <option value=25>Simple</option>
+                                <option value=30>Normal</option>
+                                <option value=37>Premium</option>
+                                <option value=45>Deluxe</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <h4>Select your Pacifier Color Tier:</h4>
+                            <select id="paciColor">
+                                <option selected value=0>Tier one</option>
+                                <option value=0.5>Tier Two</option>
+                                <option value=1>Tier Three</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <h4>Select Centerpiece Difficulty:</h4>
+                            <select class="center-dif" id="centerDif">
+                                <option value=0>Easy</option>
+                                <option value=1>Intermediate</option>
+                                <option value=1.5>Medium</option>
+                                <option value=3>Hard</option>
+                            </select>
+                        </div>
+
+                        <h3>Clay Add Ons</h3>
+                        <div class="custom-form-cont2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="addons" id="addons0">
+                                <label class="form-check-label" for="addons0">
+                                    None
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="addons" id="addons1">
+                                <label class="form-check-label" for="addons1">
+                                    One
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="addons" id="addons2">
+                                <label class="form-check-label" for="addons2">
+                                    Two
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="addons" id="addons3">
+                                <label class="form-check-label" for="addons3">
+                                    Three
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="addons" id="addons4">
+                                <label class="form-check-label" for="add-on1-no">
+                                    Four
+                                </label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <h4>Select First Add On Difficulty:</h4>
+                            <select id="addon1Dif">
+                                <option value=0 class="addons1">None</option>
+                                <option value=0 class="addons1">Easy</option>
+                                <option value=1 class="addons1">Intermediate</option>
+                                <option value=1.5 class="addons1">Medium</option>
+                                <option value=2 class="addons1">Hard</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <h4>Select Second Add On Difficulty:</h4>
+                            <select id="addon2Dif">
+                                <option value=0 class="addons2">None</option>
+                                <option value=0 class="addons2">Easy</option>
+                                <option value=1 class="addons2">Intermediate</option>
+                                <option value=1.5 class="addons2">Medium</option>
+                                <option value=2 class="addons2">Hard</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <h4>Select Third Add On Difficulty:</h4>
+                            <select id="addon3Dif">
+                                <option value=0 class="addons3">None</option>
+                                <option value=0 class="addons3">Easy</option>
+                                <option value=1 class="addons3">Intermediate</option>
+                                <option value=1.5 class="addons3">Medium</option>
+                                <option value=2 class="addons3">Hard</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <h4>Select Fourth Add On Difficulty:</h4>
+                            <select id="addon4Dif">
+                                <option value=0 class="addons4">None</option>
+                                <option value=0 class="addons4">Easy</option>
+                                <option value=1 class="addons4">Intermediate</option>
+                                <option value=1.5 class="addons4">Medium</option>
+                                <option value=2 class="addons4">Hard</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button id="result" onclick="alertUnselected(),printPaci(),calculatePrice()"
+                                type="button">Calculate</button>
+                            <button id="save" type="button">Save</button>
+                            <button id="clear" type="button">Clear</button>
+                        </div>
+                    </form>
+
+                    <h3>Detailed Quotation</h3>           
+
+                    <div class="custom-form-cont">
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Decoration Base Level</span>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Pacifier Tier:</span>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Centerpiece Description:</span>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Number of Add-Ons:</span>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Difficulty Extra Price:</span>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Total:</span>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="custom-form-cont">
-                <h4>Select Centerpiece Difficulty:</h4>
-                <select class="center-dif" id="centerDif">
-                    <option value=0>Easy</option>
-                    <option value=1>Intermediate</option>
-                    <option value=1.5>Medium</option>
-                    <option value=3>Hard</option>
-                </select>
-            </div>
-            <h3>Clay Add Ons</h3>
-            <div class="custom-form-cont2">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="addons" id="addons0">
-                    <label class="form-check-label" for="addons0">
-                        None
-                    </label>
+            <div class="col">                
+                <div class="product-card">
+                    <div class="product-tumb">
+                        <img src="../images/pacifiers/cowpaci.jpeg" alt="">
+                    </div>
+                    <div class="product-details2">
+                        <h4><a href="">Simple Custom Pacifier</a></h4>
+                        <ul>
+                            <li>Border Decoration: Yes</li>
+                            <li>Shield Decoration: None</li>
+                            <li>Handle Decoration: Simple</li>
+                            <li>Back Handle Decoration: None</li>
+                            <li>Clay Centerpiece: Yes</li>
+                            <li>Clay Add Ons: 0</li>
+                            <li>Clay Charm: No</li>
+                            <li>Glitter: No</li>
+                            <li>Wording: Black & White</li>
+                        </ul>
+                        <div class="product-bottom-details">
+                            <div class="product-price">Base Price $25 USD + Shipping</div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="addons" id="addons1">
-                    <label class="form-check-label" for="addons1">
-                        One
-                    </label>
+                <div class="product-card">
+                    <div class="product-tumb">
+                        <img src="../images/pacifiers/browncow.jpeg" alt="">
+                    </div>
+                    <div class="product-details2">
+                        <h4><a href="">Normal Custom Pacifier</a></h4>
+                        <ul>
+                            <li>Border Decoration: Yes</li>
+                            <li>Shield Decoration: Yes</li>
+                            <li>Handle Decoration: Simple</li>
+                            <li>Back Handle Decoration: None</li>
+                            <li>Clay Centerpiece: Yes</li>
+                            <li>Clay Add Ons: 0</li>
+                            <li>Clay Charm: No</li>
+                            <li>Glitter: Yes</li>
+                            <li>Wording: Black & White</li>
+                        </ul>
+                        <div class="product-bottom-details">
+                            <div class="product-price">$30 USD + Shipping</div>
+
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="addons" id="addons2">
-                    <label class="form-check-label" for="addons2">
-                        Two
-                    </label>
+                <div class="product-card">
+                    <div class="product-tumb">
+                        <img src="../images/pacifiers/starbunnypaci.jpeg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-catagory">Custom Pacifier</span>
+                        <h4><a href="">Premium Pacifier</a></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+                        <div class="product-bottom-details">
+                            <div class="product-price">$40 USD + Shipping</div>
+                            <div class="product-links">
+                                <a href=""><i class="fa fa-heart"></i></a>
+                                <a href=""><i class="fa fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="addons" id="addons3">
-                    <label class="form-check-label" for="addons3">
-                        Three
-                    </label>
+
+
+                <div class="product-card">
+                    <div class="product-tumb">
+                        <img src="../images/pacifiers/moonwolfpaci.jpeg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-catagory">Custom Pacifier</span>
+                        <h4><a href="">Deluxe Pacifier</a></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+                        <div class="product-bottom-details">
+                            <div class="product-price">$45 USD + Shipping</div>
+                            <div class="product-links">
+                                <a href=""><i class="fa fa-heart"></i></a>
+                                <a href=""><i class="fa fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="addons" id="addons4">
-                    <label class="form-check-label" for="add-on1-no">
-                        Four
-                    </label>
-                </div>
-            </div>
-
-            <div class="custom-form-cont">
-                <h4>Select First Add On Difficulty:</h4>
-                <select id="addon1Dif">
-                    <option value=0 class="addons1">None</option>
-                    <option value=0 class="addons1">Easy</option>
-                    <option value=1 class="addons1">Intermediate</option>
-                    <option value=1.5 class="addons1">Medium</option>
-                    <option value=2 class="addons1">Hard</option>
-                </select>
-            </div>
-            <div class="custom-form-cont">
-                <h4>Select Second Add On Difficulty:</h4>
-                <select id="addon2Dif">
-                    <option value=0 class="addons2">None</option>
-                    <option value=0 class="addons2">Easy</option>
-                    <option value=1 class="addons2">Intermediate</option>
-                    <option value=1.5 class="addons2">Medium</option>
-                    <option value=2 class="addons2">Hard</option>
-                </select>
-            </div>
-
-            <div class="custom-form-cont">
-                <h4>Select Third Add On Difficulty:</h4>
-                <select id="addon3Dif">
-                    <option value=0 class="addons3">None</option>
-                    <option value=0 class="addons3">Easy</option>
-                    <option value=1 class="addons3">Intermediate</option>
-                    <option value=1.5 class="addons3">Medium</option>
-                    <option value=2 class="addons3">Hard</option>
-                </select>
-            </div>
-
-            <div class="custom-form-cont">
-                <h4>Select Fourth Add On Difficulty:</h4>
-                <select id="addon4Dif">
-                    <option value=0 class="addons4">None</option>
-                    <option value=0 class="addons4">Easy</option>
-                    <option value=1 class="addons4">Intermediate</option>
-                    <option value=1.5 class="addons4">Medium</option>
-                    <option value=2 class="addons4">Hard</option>
-                </select>
-            </div>
-
-            <button id="result" onclick="alertUnselected(),printPaci(),calculatePrice()"
-                type="button">Calculate</button>
-        </form>
-    </div>
-    <br>
-    <div class="custom-form container-fluid>">
-        <h3>Quotation Results</h3>
-
-        <div class="custom-form-cont">
-            <div class="input-group input-group-sm mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-sm">Decoration Base Level</span>
-                <input type="text" class="form-control">
-            </div>
-            <div class="input-group input-group-sm mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-sm">Pacifier Tier:</span>
-                <input type="text" class="form-control">
-            </div>
-            <div class="input-group input-group-sm mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-sm">Centerpiece Description:</span>
-                <input type="text" class="form-control">
             </div>
         </div>
+    </div>
     </div>
 
     <footer class="container-fluid">
