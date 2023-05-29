@@ -79,6 +79,10 @@
                                 <option value=3>Hard</option>
                             </select>
                         </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <h4>Pacifier Description:</h4>
+                            <textarea class="form-control" id="pacifierDescription" rows="5"></textarea>
+                        </div>
 
                         <h3>Clay Add Ons</h3>
                         <div class="custom-form-cont2">
@@ -158,44 +162,45 @@
                         <div class="d-flex justify-content-center">
                             <button id="result" onclick="alertUnselected(),printPaci(),calculatePrice()"
                                 type="button">Calculate</button>
-                            <button id="save" type="button">Save</button>
-                            <button id="clear" type="button">Clear</button>
+                            <button id="saveButton" type="button">Save</button>
+                            <button id="clearButton">Clear</button>
                         </div>
                     </form>
 
-                    <h3>Detailed Quotation</h3>           
+                    <h3>Detailed Quotation</h3>
 
                     <div class="custom-form-cont">
                         <div class="input-group input-group-sm mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Decoration Base Level</span>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="decorationBaseLevel" readonly>
                         </div>
                         <div class="input-group input-group-sm mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Pacifier Tier:</span>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="pacifierTier" readonly>
                         </div>
                         <div class="input-group input-group-sm mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Centerpiece Description:</span>
-                            <div id="paci-desc" class="form-control"></div>
-                            
+                            <input type="text" class="form-control" id="centerDescription" readonly>
                         </div>
                         <div class="input-group input-group-sm mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Number of Add-Ons:</span>
-                            <input type="text" class="form-control">
-                        </div>
+                            <textarea class="form-control" id="numAddOns" readonly></textarea>
+                          </div>                          
                         <div class="input-group input-group-sm mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Difficulty Extra Price:</span>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="difficultyPrice" readonly>
                         </div>
                         <div class="input-group input-group-sm mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Total:</span>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="totalPrice" readonly>
                         </div>
                     </div>
+
+
                 </div>
             </div>
 
-            <div class="col">                
+            <div class="col">
                 <div class="product-card">
                     <div class="product-tumb">
                         <img src="../images/pacifiers/cowpaci.jpeg" alt="">

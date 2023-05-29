@@ -415,6 +415,24 @@ nav {
   display: flex;
 }
 
+.form-control {
+  border: 2px solid #dbf7ef;
+  background-color: #8ce5de !important;
+  color: #fcfefe;
+  position: relative;
+  margin-top: 10px;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:focus {
+  background-color: #8ce5de;
+  border-color: #dbf7ef;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+  color: #fff; /* Added line to set font color to white */
+}
+
 .footer__redes {
   flex-grow: 1;
   position: relative;

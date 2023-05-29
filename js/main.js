@@ -17,7 +17,7 @@ const addonsDif = [];
 
 const paci = new Pacifier("0");
 const quotations = [];
-quotations.push(paci);
+
 
 //FUNCIONES AUXILIARES
 //ALERT
@@ -49,19 +49,21 @@ function calculateTierPrice() {
 }
 
 //CENTER DIFFICULTY: This adds an extra price if the difficulty of the handmade centerpiece for the pacifier is more higher than usual
-function calculateCenterDif() {
+function calculateCenterPrice() {
    let centerDif = document.getElementById("centerDif");
    let centerDifPrice = centerDif.options[centerDif.selectedIndex].value;
-   paci.centerDif = centerDifPrice;   
+   paci.centerDif = centerDifPrice;
    return paci.centerDif;
 }
 
 //CALCULATE ADD ONS: This calculate how many extra add ons, usually clay pieces the pacifier has
 
 function calculateAddons() {
-   if (document.getElementById('addons1').checked === true) {
+   if (document.getElementById('addons0').checked === true) {
+      paci.addons = 0;
+   } else if (document.getElementById('addons1').checked === true)
       paci.addons = 1;
-   } else if (document.getElementById('addons2').checked === true) {
+   else if (document.getElementById('addons2').checked === true) {
       paci.addons = 2;
    } else if (document.getElementById('addons3').checked === true) {
       paci.addons = 3;
@@ -74,27 +76,21 @@ function calculateAddons() {
 //CALCULATE ADDONS DISCOUNT: This calculates the discount, depending on the pacifier decoration level, since for some levels, a number of add ons is free
 
 function calculateaddonsPrice() {
-   if ((paci.level == 25 || paci.level == 30) && paci.addons == 1) {
-      paci.addonsPrice = 2;
-   } else if ((paci.level == 25 || paci.level == 30) && paci.addons == 2) {
-      paci.addonsPrice = 4;
-   } else if ((paci.level == 25 || paci.level == 30) && paci.addons == 3) {
-      paci.addonsPrice = 6;
-   } else if ((paci.level == 25 || paci.level == 30) && paci.addons == 4) {
-      paci.addonsPrice = 8;
-   } else if (paci.level == 37 && paci.addons == 2) {
-      paci.addonsPrice = 2;
-   } else if (paci.level == 37 && paci.addons == 3) {
-      paci.addonsPrice = 4;
-   } else if (paci.level == 37 && paci.addons == 4) {
-      paci.addonsPrice = 6;
-   } else if (paci.level == 45 && paci.addons == 3) {
-      paci.addonsPrice = 2;
-   } else if (paci.level == 45 && paci.addons == 4) {
-      paci.addonsPrice = 4;
-   }
-   return paci.calculateaddonsPrice;
+   paci.addonsPrice =
+      (paci.level == 25 || paci.level == 30)
+         ? (paci.addons == 1 ? 2 :
+            (paci.addons == 2 ? 4 :
+               (paci.addons == 3 ? 6 :
+                  (paci.addons == 4 ? 8 : 0))))
+         : (paci.level == 37 && paci.addons >= 2 && paci.addons <= 4)
+            ? 2
+            : (paci.level == 45 && paci.addons >= 3 && paci.addons <= 4)
+               ? 2
+               : 0;
+
+   return paci.addonsPrice;
 }
+
 
 //Calculate Extra Addons Difficulty: This gets the class for getting the selected value on the function calculateAddonsDifficulty()
 let addonsDif1 = document.getElementsByClassName("addons1");
@@ -135,24 +131,87 @@ function sum() {
 function printPaci() {
    calculatePaciLevel();
    calculateTierPrice();
-   calculateCenterDif();
+   calculateCenterPrice();
    calculateAddons();
    setAddonsDif();
    sum();
    calculateaddonsPrice(paci.addons);
-   console.log(paci);
-
 }
 
 function calculatePrice() {
-   let description = prompt("Describe your centerpiece as detailed as you can");
-   document.getElementById("paci-desc").innerHTML = description;
+
+   // Calculate the final price
    let finalPrice = parseInt(paci.level) + parseFloat(paci.tier) + parseFloat(paci.centerDif) + parseInt(paci.addonsPrice) + parseFloat(paci.addonsDifTotal);
-   alert(finalPrice);
-   const quotationsJSON = JSON.stringify(quotations);
-   localStorage.setItem('user', JSON.stringify(quotations));
-   localStorage.getItem('user');   
+   
+   // Update the input fields
+
+   //PACIFIER BASE LEVEL
+      const levelMapping = {
+      25: "Simple",
+      30: "Normal",
+      37: "Premium",
+      45: "Deluxe"
+    };
+    
+    const levelDescription = levelMapping[parseFloat(paci.level)] || "Unknown";
+
+   document.getElementById('decorationBaseLevel').value = "You selected the Base Level of Decoration " + levelDescription + " with a value base of $" + paci.level + " USD";
+
+   //PACIFIER TIER
+
+   // Determine the tier description based on the selected value
+   let tierDescription =
+      paci.tier === "0" ? "You selected a Tier 1 pacifier color which adds 0USD to the Final Price" :
+         paci.tier === "0.5" ? "You selected a Tier 2 pacifier color which adds 0.5USD to the Final Price" :
+            paci.tier === "1" ? "You selected a Tier 3 pacifier color which adds 1USD to the Final Price" :
+               "";
+
+   document.getElementById('pacifierTier').value = tierDescription;   
+
+   //CENTERPIECE DESCRIPTION
+   let description = document.getElementById("pacifierDescription").value;
+   document.getElementById("centerDescription").value = description;
+
+   //NUMBER OF ADD ONS
+   document.getElementById('numAddOns').value = "You have Selected " +paci.addons + " Add ons, which as an extra cost of " +paci.addonsPrice +"USD for this Base Level of Decoration";
+
+
+   document.getElementById('difficultyPrice').value = "The extra cost for the difficulty of the pieces is " + parseFloat(paci.centerDif+paci.addonsDifTotal) +"USD";
+
+   //FINAL PRICE
+   document.getElementById('totalPrice').value = "The Final Price for this Custom Pacifier is "+ finalPrice+"USD";
+
+   // Update the paci object with the calculated values
+   paci.addonsPrice = parseFloat(paci.addonsPrice);
+   paci.addonsDifTotal = parseFloat(paci.addonsDifTotal);
 }
 
-/*document.getElementById("result").innerHTML == finalPrice;*/
+
+// SAVE BUTTON: Saves the Quotation on The Local Storage
+document.getElementById("saveButton").addEventListener("click", function () {
+   // Prompt the user for the new key name
+   const newKey = prompt("Enter the new key name for the quotation:");
+
+   // Check if the new key is provided
+   if (newKey) {
+      // Retrieve the existing quotations from local storage
+      const quotations = JSON.parse(localStorage.getItem('quotations')) || {};
+
+      // Add the current quotation to the quotations using the new key
+      quotations[newKey] = paci;
+
+      // Save the updated quotations back to local storage
+      localStorage.setItem('quotations', JSON.stringify(quotations));
+
+      console.log("Quotation saved with key:", newKey);
+   }
+});
+
+// CLEAR BUTTON: Clears the Local Storage
+document.getElementById("clearButton").addEventListener("click", function (event) {
+   event.preventDefault();
+   // Clear the local storage
+   localStorage.removeItem('quotations');
+   console.log("Local storage cleared");
+});
 
