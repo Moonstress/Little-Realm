@@ -6,6 +6,100 @@ $font-Nerko: 'Nerko One', cursive;
 
 $carousel-indicator-height: 0px !default;
 
+@media (min-width: 1400px) {
+    .container-xxl {
+        max-width: 1600px;
+    }
+}
+
+// SWEETALERT
+
+.swal-overlay {
+    background-color: #cdf0f473;
+}
+
+.swal-modal {
+    width: 478px;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #fbe3e4;
+    text-align: center;
+    border-radius: 5px;
+    position: fixed;
+    margin: 20px auto;
+    display: inline-block;
+    vertical-align: text-bottom;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    z-index: 10001;
+    transition: transform 0.3s, opacity 0.2s;
+    top: 25%;
+    right: 36%;
+}
+
+.swal-button {
+    background-color: #ffafb4;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 24px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.swal-icon--success {
+    border-color: #bdecee !important;
+}
+
+.swal-icon--success__line {
+    height: 5px;
+    background-color: #bdecee;
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 2;
+}
+.swal-icon--success__ring {
+    width: 80px;
+    height: 80px;
+    border: 4px solid hsl(182.5deg 58.54% 83.92% / 71%);
+    border-radius: 50%;
+    box-sizing: content-box;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    z-index: 2;
+}
+
+.swal-icon--success:after, .swal-icon--success:before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 60px;
+    height: 120px;
+    background: #fbe3e4;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.swal-icon--success__hide-corners {
+    width: 5px;
+    height: 90px;
+    background-color: #fbe3e4;
+    padding: 1px;
+    position: absolute;
+    left: 28px;
+    top: 8px;
+    z-index: 1;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+//
+
 .input-group-text {
     display: flex;
     align-items: center;
@@ -24,5 +118,3 @@ $carousel-indicator-height: 0px !default;
     /* text-align: center; */
     color: $white;
 }
-
-

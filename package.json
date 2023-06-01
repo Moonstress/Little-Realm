@@ -8,5 +8,8 @@
     "scss": "node-sass --watch sass/scss -o sass/css"
   },
   "author": "Moonstress",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert": "^2.1.2"
+  }
 }

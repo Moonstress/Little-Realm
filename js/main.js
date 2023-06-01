@@ -3,10 +3,11 @@
 
 // CLASSES: The pacifier has a price according to its level of decoration, the tier of the base pacifier, the amount of addons, the difficulty of the centerpiece, and the individual difficulty of all the extra add-ons
 class Pacifier {
-  constructor(levelName, levelPrice, tier, addons, addonsPrice, centerDif, addonsDifTotal) {
+  constructor(levelName, levelPrice, tiername, tierprice, addons, addonsPrice, centerDif, addonsDifTotal) {
     this.levelName = levelName;
     this.levelPrice = levelPrice;
-    this.tier = tier;
+    this.tiername = tiername;
+    this.tierprice = tierprice;
     this.addons = addons;
     this.addonsPrice = addonsPrice;
     this.centerDif = centerDif;
@@ -18,13 +19,14 @@ class Pacifier {
 function createPacifier() {
   let levelName = getPacifierLevel();
   let levelPrice = getPacifierLevelPrice();
-  let tier = getTierPrice();
+  let tiername = getTierName();
+  let tierprice = getTierPrice();
   let addons = getAddonsCount();
   let addonsPrice = calculateAddonsPrice(); // Corrected function name
   let centerDif = getCenterPrice();
-  let addonsDifTotal = calculateAddonsDifficultyPrice() ;
+  let addonsDifTotal = calculateAddonsDifficultyPrice();
 
-  return new Pacifier(levelName, levelPrice, tier, addons, addonsPrice, centerDif, addonsDifTotal);
+  return new Pacifier(levelName, levelPrice, tiername, tierprice, addons, addonsPrice, centerDif, addonsDifTotal);
 }
 
 
@@ -39,6 +41,13 @@ function getPacifierLevelPrice() { // Corrected function name
   let selecteddecoLevel = document.getElementById("decoLevel");
   let decoLevelPrice = selecteddecoLevel.options[selecteddecoLevel.selectedIndex].value;
   return decoLevelPrice;
+}
+
+// Function to get the name of the color tier
+function getTierName() {
+  let tier = document.getElementById("paciColor");
+  let paciColorTier = tier.options[tier.selectedIndex].text;
+  return paciColorTier;
 }
 
 // Function to get the additional price of the pacifier base color
@@ -108,14 +117,13 @@ function calculateAddonsDifficultyPrice() {
   return addonsDifficultyPrice;
 }
 
-
-
 // Function to calculate the total price
 function calculateTotalPrice() {
   let paci = createPacifier();
   let levelName = paci.levelName;
   let levelPrice = parseFloat(paci.levelPrice);
-  let tierPrice = parseFloat(paci.tier);
+  let tierName = paci.tiername;
+  let tierPrice = parseFloat(paci.tierprice);
   let centerPrice = parseFloat(paci.centerDif);
   let addonsPrice = parseFloat(paci.addonsPrice);
   let addonsDifficultyPrice = parseFloat(paci.addonsDifTotal);
@@ -123,12 +131,19 @@ function calculateTotalPrice() {
 
   // Update the input fields with the calculated values
   document.getElementById("decorationBaseLevel").value = `You selected the Base Level of Decoration ${levelName} with a value base of $${levelPrice} USD`;
-  document.getElementById("pacifierTier").value = `You selected a Tier ${tierPrice} pacifier color which adds ${tierPrice} USD to the Final Price`;
+  document.getElementById("pacifierTier").value = `You selected a Tier ${tierName} pacifier color which adds ${tierPrice} USD to the Final Price`;
   document.getElementById("centerDescription").value = document.getElementById("pacifierDescription").value;
   document.getElementById("numAddOns").value = `You have selected ${paci.addons} Add-ons, which have an extra cost of ${addonsPrice} USD for this Base Level of Decoration`;
   document.getElementById("difficultyPrice").value = `The extra cost for the difficulty of the centerpiece is ${centerPrice} USD`;
   document.getElementById("difficultyAddonsPrice").value = `The extra cost for the difficulty of the add-ons is ${addonsDifficultyPrice} USD`;
   document.getElementById("totalPrice").value = `The Final Price for this Custom Pacifier is ${totalPrice} USD`;
+
+  swal({
+    text: "Quotation Successful",
+    icon: "success",
+    buttons: false,
+    timer: 1200,
+  });
 
 }
 
@@ -137,7 +152,7 @@ document.getElementById("calculateButton").addEventListener("click", function (e
   event.preventDefault(); // Prevent page refresh
 
   if (getAddonsCount() === undefined) {
-    alert("Please select at least one add-on.");
+    swal("Please select at least one add-on.");
     return; // Prevent execution if no add-ons are selected
   }
 
@@ -147,15 +162,33 @@ document.getElementById("calculateButton").addEventListener("click", function (e
 
 // Function to save the quotation in local storage
 function saveQuotation() {
-  const newKey = prompt("Enter the new key name for the quotation:");
-  if (newKey) {
-    const quotations = JSON.parse(localStorage.getItem("quotations")) || {};
-    const paci = createPacifier();
-    quotations[newKey] = paci;
-    localStorage.setItem("quotations", JSON.stringify(quotations));
-    console.log("Quotation saved with key:", newKey);
-  }
+  let newKey = null;
+
+  swal({
+    content: {
+      element: "input",
+      attributes: {
+        placeholder: "Please insert a Name for this Pacifier Quotation",
+      },
+    },
+  }).then(function (value) {
+    newKey = value;
+
+    if (newKey) {
+      const quotations = JSON.parse(localStorage.getItem("quotations")) || {};
+      const paci = createPacifier();
+      quotations[newKey] = paci;
+      localStorage.setItem("quotations", JSON.stringify(quotations));
+      swal({
+        text: "Quotation Saved Successfully",
+        icon: "success",
+        buttons: false,
+        timer: 1300,
+      });
+    }
+  });
 }
+
 
 // Event listener for save button click
 document.getElementById("saveButton").addEventListener("click", function (event) {
@@ -173,4 +206,11 @@ function clearLocalStorage() {
 document.getElementById("clearButton").addEventListener("click", function (event) {
   event.preventDefault(); // Prevent page refresh
   clearLocalStorage();
+
+  swal({
+    text: "Quotations Deleted",
+    icon: "success",
+    buttons: false,
+    timer: 1500,
+  });
 });

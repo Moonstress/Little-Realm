@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script defer src="../js/main.js"></script>
 
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 </head>
 
@@ -49,7 +52,7 @@
     <!-- <small>Get an approximate price for the pacifier of your dreams!</small> -->
     <div class="container-xxl">
         <div class="row">
-            <div class="col">
+            <div class="col-5">
                 <div class="custom-form">
                     <h3>Main Details</h3>
                     <form method="post">
@@ -57,9 +60,9 @@
                             <h4>Select Level of Decoration:</h4>
                             <select class="deco-level" id="decoLevel">
                                 <option value=25>Simple</option>
-                                <option value=30 >Normal</option>
-                                <option value=37 >Premium</option>
-                                <option value=45 >Deluxe</option>
+                                <option value=30>Normal</option>
+                                <option value=37>Premium</option>
+                                <option value=45>Deluxe</option>
                             </select>
                         </div>
                         <div class="d-flex justify-content-between">
@@ -166,9 +169,111 @@
                         </div>
                     </form>
 
-                    <h3>Detailed Quotation</h3>
+                    
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="product-card-quotation">
+                    <div class="product-tumb">
+                        <img src="../images/pacifiers/cowpaci.jpeg" alt="">
+                    </div>
+                    <div class="product-details2">
+                        <h4><a href="">Simple Pacifier</a></h4>
+                        <ul>
+                            <li>Border Decoration: Yes</li>
+                            <li>Shield Decoration: None</li>
+                            <li>Handle Decoration: Simple</li>
+                            <li>Back Handle Decoration: None</li>
+                            <li>Clay Centerpiece: Yes</li>
+                            <li>Clay Add Ons: 0</li>
+                            <li>Clay Charm: No</li>
+                            <li>Glitter: No</li>
+                            <li>Wording: Black & White</li>
+                        </ul>
+                        <div class="product-bottom-details">
+                            <div class="product-price">Base $25 USD + Shipping</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card-quotation">
+                    <div class="product-tumb">
+                        <img src="../images/pacifiers/browncow.jpeg" alt="">
+                    </div>
+                    <div class="product-details2">
+                        <h4><a href="">Normal Pacifier</a></h4>
+                        <ul>
+                            <li>Border Decoration: Yes</li>
+                            <li>Shield Decoration: Yes</li>
+                            <li>Handle Decoration: Simple</li>
+                            <li>Back Handle Decoration: None</li>
+                            <li>Clay Centerpiece: Yes</li>
+                            <li>Clay Add Ons: 0</li>
+                            <li>Clay Charm: No</li>
+                            <li>Glitter: Yes</li>
+                            <li>Wording: Black & White</li>
+                        </ul>
+                        <div class="product-bottom-details">
+                            <div class="product-price">Base $30 USD + Shipping</div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card-quotation">
+                    <div class="product-tumb">
+                        <img src="../images/pacifiers/starbunnypaci.jpeg" alt="">
+                    </div>
+                    <div class="product-details2">                        
+                        <h4><a href="">Premium Pacifier</a></h4>
+                        <ul>
+                            <li>Border Decoration: Yes</li>
+                            <li>Shield Decoration: Yes</li>
+                            <li>Handle Decoration: Simple</li>
+                            <li>Back Handle Decoration: None</li>
+                            <li>Clay Centerpiece: Yes</li>
+                            <li>Clay Add Ons: 0</li>
+                            <li>Clay Charm: No</li>
+                            <li>Glitter: Yes</li>
+                            <li>Wording: Black & White</li>
+                        </ul>
+                        <div class="product-bottom-details">
+                            <div class="product-price">Base $40 USD + Shipping</div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card-quotation">
+                    <div class="product-tumb">
+                        <img src="../images/pacifiers/moonwolfpaci.jpeg" alt="">
+                    </div>
+                    <div class="product-details2">                        
+                        <h4><a href="">Deluxe Pacifier</a></h4>
+                        <ul>
+                            <li>Border Decoration: Yes</li>
+                            <li>Shield Decoration: Yes</li>
+                            <li>Handle Decoration: Simple</li>
+                            <li>Back Handle Decoration: None</li>
+                            <li>Clay Centerpiece: Yes</li>
+                            <li>Clay Add Ons: 0</li>
+                            <li>Clay Charm: No</li>
+                            <li>Glitter: Yes</li>
+                            <li>Wording: Black & White</li>
+                        </ul>
+                        <div class="product-bottom-details">
+                            <div class="product-price">Base $40 USD + Shipping</div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>           
 
                     <div class="custom-form-cont">
+                        <h3>Detailed Quotation</h3>
                         <div class="input-group input-group-sm mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Decoration Base Level</span>
                             <input type="text" class="form-control" id="decorationBaseLevel" readonly>
@@ -184,13 +289,13 @@
                         <div class="input-group input-group-sm mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-sm">Number of Add-Ons:</span>
                             <textarea class="form-control" id="numAddOns" readonly></textarea>
-                          </div>                          
+                        </div>
                         <div class="input-group input-group-sm mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-sm">Centerpiece Difficulty Extra Price:</span>
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Centerpiece Difficulty:</span>
                             <input type="text" class="form-control" id="difficultyPrice" readonly>
                         </div>
                         <div class="input-group input-group-sm mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-sm">Add-Ons Difficulty Extra Price:</span>
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Add-Ons Difficulty:</span>
                             <input type="text" class="form-control" id="difficultyAddonsPrice" readonly>
                         </div>
                         <div class="input-group input-group-sm mb-3">
@@ -199,98 +304,13 @@
                         </div>
                     </div>
 
-
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="product-card">
-                    <div class="product-tumb">
-                        <img src="../images/pacifiers/cowpaci.jpeg" alt="">
-                    </div>
-                    <div class="product-details2">
-                        <h4><a href="">Simple Custom Pacifier</a></h4>
-                        <ul>
-                            <li>Border Decoration: Yes</li>
-                            <li>Shield Decoration: None</li>
-                            <li>Handle Decoration: Simple</li>
-                            <li>Back Handle Decoration: None</li>
-                            <li>Clay Centerpiece: Yes</li>
-                            <li>Clay Add Ons: 0</li>
-                            <li>Clay Charm: No</li>
-                            <li>Glitter: No</li>
-                            <li>Wording: Black & White</li>
-                        </ul>
-                        <div class="product-bottom-details">
-                            <div class="product-price">Base Price $25 USD + Shipping</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-tumb">
-                        <img src="../images/pacifiers/browncow.jpeg" alt="">
-                    </div>
-                    <div class="product-details2">
-                        <h4><a href="">Normal Custom Pacifier</a></h4>
-                        <ul>
-                            <li>Border Decoration: Yes</li>
-                            <li>Shield Decoration: Yes</li>
-                            <li>Handle Decoration: Simple</li>
-                            <li>Back Handle Decoration: None</li>
-                            <li>Clay Centerpiece: Yes</li>
-                            <li>Clay Add Ons: 0</li>
-                            <li>Clay Charm: No</li>
-                            <li>Glitter: Yes</li>
-                            <li>Wording: Black & White</li>
-                        </ul>
-                        <div class="product-bottom-details">
-                            <div class="product-price">$30 USD + Shipping</div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-tumb">
-                        <img src="../images/pacifiers/starbunnypaci.jpeg" alt="">
-                    </div>
-                    <div class="product-details">
-                        <span class="product-catagory">Custom Pacifier</span>
-                        <h4><a href="">Premium Pacifier</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
-                        <div class="product-bottom-details">
-                            <div class="product-price">$40 USD + Shipping</div>
-                            <div class="product-links">
-                                <a href=""><i class="fa fa-heart"></i></a>
-                                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="product-card">
-                    <div class="product-tumb">
-                        <img src="../images/pacifiers/moonwolfpaci.jpeg" alt="">
-                    </div>
-                    <div class="product-details">
-                        <span class="product-catagory">Custom Pacifier</span>
-                        <h4><a href="">Deluxe Pacifier</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
-                        <div class="product-bottom-details">
-                            <div class="product-price">$45 USD + Shipping</div>
-                            <div class="product-links">
-                                <a href=""><i class="fa fa-heart"></i></a>
-                                <a href=""><i class="fa fa-shopping-cart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+        
     </div>
+    
     </div>
+
+    
 
     <footer class="container-fluid">
         <div class="footer__redes">
