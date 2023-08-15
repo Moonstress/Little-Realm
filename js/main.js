@@ -138,13 +138,6 @@ function calculateTotalPrice() {
   document.getElementById("difficultyAddonsPrice").value = `The extra cost for the difficulty of the add-ons is ${addonsDifficultyPrice} USD`;
   document.getElementById("totalPrice").value = `The Final Price for this Custom Pacifier is ${totalPrice} USD`;
 
-  swal({
-    text: "Quotation Successful",
-    icon: "success",
-    buttons: false,
-    timer: 1200,
-  });
-
 }
 
 // Event listener for calculate button click
@@ -155,8 +148,16 @@ document.getElementById("calculateButton").addEventListener("click", function (e
     swal("Please select at least one add-on.");
     return; // Prevent execution if no add-ons are selected
   }
+  swal({
+    text: "Quotation Successful",
+    icon: "success",
+    buttons: false,
+    timer: 1200,
+  });
+  setTimeout(() => {
+    calculateTotalPrice();
+  }, 1500);
 
-  calculateTotalPrice();
 });
 
 
@@ -214,3 +215,44 @@ document.getElementById("clearButton").addEventListener("click", function (event
     timer: 1500,
   });
 });
+
+
+/**
+ * Fetches custom data and renders it in the respective product details elements.
+ */
+async function getCustoms() {
+  let url = '../customs.json';
+  try {
+    let res = await fetch(url);
+    return await res.json();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function renderCustoms() {
+  let customs = await getCustoms();
+
+  for (let i = 0; i < customs.length; i++) {
+    const custom = customs[i];
+    let htmlSegment = `<h4>${custom.name}</h4>
+    <ul>
+      <li>Border Decoration: ${custom.border}</li>
+      <li>Shield Decoration: ${custom.shield}</li>
+      <li>Handle Decoration: ${custom.handle}</li>
+      <li>Back Handle Decoration: ${custom.backhandle}</li>
+      <li>Clay Centerpiece: ${custom.centerpiece}</li>
+      <li>Clay Add Ons: ${custom.addons}</li>
+      <li>Clay Charm: ${custom.charm}</li>
+      <li>Glitter: ${custom.glitter}</li>
+      <li>Wording: ${custom.wording}</li>
+    </ul>
+    <div class="product-bottom-details">
+                            <div class="product-price">${custom.price}</div>`;
+
+    const productDetails = document.querySelector(`#product-details${i + 1}`);
+    productDetails.innerHTML = htmlSegment;
+  }
+}
+
+renderCustoms();
